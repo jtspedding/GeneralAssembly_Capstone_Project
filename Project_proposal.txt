@@ -1,0 +1,49 @@
+Problem statement:
+Having recently finished university and moved half-way across Australia, I've 
+decided it's time to adopt a hobby, and that hobby is competitive Warhammer.
+
+Warhammer is a tabletop boardgame (games-workshop.com/en-AU/Warhammer-Age-of-Sigmar)
+involving painted miniatures where dice rolls are used to determine the 
+success or failure of player/army actions. Each model has unique in-game 
+statistics, abilities, and costs. In competitive Warhammer each players' army 
+consists of 2000 points worth of models.
+
+For my GA project I propose to use linear regression to model the estimated 
+in game points cost of Warhammer units. Following this, model residuals will 
+be examined to determine which units have statistics and abilities which are 
+currently under costed (based on model estimates), with the intention that an
+optimised army list will select more units that are under-costed and minimise
+those which are over costed.
+
+Hypothesis:
+H1 - 	Warhammer units will exhibit variance in their modelled points cost (unit
+	statistics/abilities regressed on points cost).
+
+Assumptions:
+A1 - 	Statistical assumptions for unit data (i.e., OLS assumptions).
+A2 - 	That unit stats/abilities will strongly relate to unit costs (see goals G2).
+	Given the producers of Warhammer support competitive play they are 
+	incentivised to balance the overall strengths and costs of in-game 
+	units (with points updated every 3ish months).
+
+Goals/steps:
+G1 -	Extract unit data from Wahapedia (wahapedia.ru/aos3/factions/hedonites-of-slaanesh/warscrolls.html).
+	Data will be scraped from Wahapedia, then converted into a csv for 
+	cleaning/modelling in python.
+G2 -	Data will be transformed, cleaned, and basic features created to improve predictive 
+	performance (e.g., simple moderation and/or curvilinear features added).
+G3 - 	Useful predictive models will be generated. Given the strong (assumed) relationship 
+	between model statistics and in-game points cost, the first success metrics will 
+	include a high model R2 value (i.e., R2 >= .50).
+G4 -  Data visulisation techniques will be used to examine the data, with particular interest to
+	residual scores.
+
+Risks/limitations:
+R1 - 	Many units have unique abilities that which may not be easily coded, some qualitative 
+	coding/data entry may be required for these skills/abilities (gross). I will attempt more programatic approaches to this issue but I suspect some degree of manual entry/domain knowledge will be required. 
+R2 -	Any cost related to unique abilities that are not imputed in the data will inflate 
+	error terms.
+R3 - 	Having a small sample size of n = 200-300 is appropriate for regression, but likely 
+	too small for anything more advanced (i.e., ML techniques).
+R4 - 	Not technically a predictive analysis (although it could be used for this), instead 
+	the key variable of interest are the regression residuals. 

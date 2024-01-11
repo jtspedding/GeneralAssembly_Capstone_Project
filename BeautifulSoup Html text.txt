@@ -1,0 +1,5211 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+   var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),d.isInitialized=!0,d.isComplete=!0,f("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(f("----- F'D: "+d.name),u())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e){!0!==h(e)&&0!=s&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(r))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,s,a,d,h,f,u){var m=new l(e,i,n,s,a,d,h,u);!0===f?o[e]=m:r[e]=m,t[e]=m,c(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,c(n)},addFunc:function(e,n,s,l,d,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,c(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,c(o)},items:t,processAll:u,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-1&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-1&cb=28', true, [], true, false, true, false);
+  </script>
+  <script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+   window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"domain_id":422626,"ezcache_level":0,"ezcache_skip_code":0,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"page_view_id":"722ebd4b-80b6-406f-4c7f-cb3bb8afa49c","response_size_orig":593104,"response_time_orig":1822,"template_id":5,"url":"https://wahapedia.ru/aos3/factions/hedonites-of-slaanesh/warscrolls.html","word_count":0,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');
+  </script>
+  <script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+   __ez.queue.addFile('/parsonsmaize/mulvane.js', '/parsonsmaize/mulvane.js?gcb=195-1&cb=5', true, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/parsonsmaize/olathe.js', '/parsonsmaize/olathe.js?gcb=195-1&cb=20', false, ['/parsonsmaize/abilene.js','/parsonsmaize/mulvane.js'], true, false, true, false);__ez.queue.addFile('/porpoiseant/et.js', '/porpoiseant/et.js?gcb=195-1&cb=2', false, [], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();
+  </script>
+  <script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+   !function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-1&cb=6', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/vista.js', '/detroitchicago/vista.js?gcb=195-1&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-1&cb=5', false, ['/parsonsmaize/abilene.js'], true, false, true, false);
+  </script>
+  <base href="https://wahapedia.ru/aos3/factions/hedonites-of-slaanesh/warscrolls.html"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Wahapedia: Hedonites of Slaanesh army rules, abilities, and wargear." name="description"/>
+  <meta content="Wahapedia, Age of Sigmar, 3 edition, THE MASQUE, BLADEBRINGER, SLAANESH, BLISSBARB SEEKERS, SLAANGOR FIENDBLOODS, FIENDS, SYNESSA, SEEKERS, HELLSTRIDERS WITH CLAW-SPEARS, EXALTED CHARIOT, SHALAXI HELBANE, WIZARD, SYMBARESH TWINSOULS, DAEMONETTE, SHARDSPEAKER OF SLAANESH, HEDONITE, TOTEM, CHAOS, CHARIOT OF SLAANESH, HELLSTRIDERS, HEDONITES OF SLAANESH, SEEKER CHARIOT, CONTORTED EPITOME, HERO, MYRMIDESH PAINBRINGERS, SYLL?ESSKE, DAEMON, SOULFEASTER, INFERNAL ENRAPTURESS, LORD OF HUBRIS, MONSTER, DEXCESSA, HELLFLAYER, LORD OR PAIN, VICELEADER, GREATER DAEMON, SLICKBLADE SEEKERS, DAEMONETTE HOST, GLUTOS ORSCOLLION, THE DREAD PAGEANT, HELLSTRIDERS WITH HELLSCOURGES, SIGVALD, MORTAL, BLISSBARB ARCHERS, HERALD OF SLAANESH, KEEPER OF SECRETS" name="keywords"/>
+  <link href="/aos3/css/fonts4.css" rel="stylesheet" type="text/css"/>
+  <link href="/aos3/css/main4.css" rel="stylesheet"/>
+  <link href="/aos3/css/header4.css" rel="stylesheet"/>
+  <link href="/aos3/css/profile4.css" rel="stylesheet"/>
+  <link href="/aos3/css/noprint4.css" rel="stylesheet"/>
+  <link href="/aos3/img/favicon.png" rel="icon" type="image/png"/>
+  <link href="/tooltipster/dist/css/tooltipster.bundle.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/manifest_AoS3.json" rel="manifest"/>
+  <link href="/img/web-app/wahapedia-icon-57.png" rel="apple-touch-icon" sizes="57x57"/>
+  <link href="/img/web-app/wahapedia-icon-76.png" rel="apple-touch-icon" sizes="76x76"/>
+  <link href="/img/web-app/wahapedia-icon-114.png" rel="apple-touch-icon" sizes="114x114"/>
+  <link href="/img/web-app/wahapedia-icon-120.png" rel="apple-touch-icon" sizes="120x120"/>
+  <link href="/img/web-app/wahapedia-icon-128.png" rel="apple-touch-icon" sizes="128x128"/>
+  <link href="/img/web-app/wahapedia-icon-152.png" rel="apple-touch-icon" sizes="152x152"/>
+  <link href="/img/web-app/wahapedia-icon-167.png" rel="apple-touch-icon" sizes="167x167"/>
+  <link href="/img/web-app/wahapedia-icon-180.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/img/web-app/wahapedia-icon-192.png" rel="apple-touch-icon" sizes="192x192"/>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript">
+  </script>
+  <script src="/tooltipster/dist/js/tooltipster.bundle.min.js" type="text/javascript">
+  </script>
+  <script src="/tooltipster-scrollableTip/tooltipster-scrollableTip.min.js" type="text/javascript">
+  </script>
+  <link href="/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-noir.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/aos3/css/tooltipster-noir4.css" rel="stylesheet"/>
+  <title>
+   Warscrolls
+  </title>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfARRUkAAAAAD0Li_kOGLUDH_77uo1aMO8YZsA4">
+  </script>
+  <script>
+   function submitCaptcha(e) {
+	e.preventDefault();
+	grecaptcha.ready(function() {
+		grecaptcha.execute('6LfARRUkAAAAAD0Li_kOGLUDH_77uo1aMO8YZsA4', {action: 'submit'}).then(function(token) {    
+			$(".tooltipster-box #captcha-box").val(token);
+			$(".tooltipster-box #disable-ads").submit();
+		});
+	});
+}
+function loadErrors() {
+  if($(location).attr('hash') == ""){
+  let searchParams = new URLSearchParams(window.location.search);
+     if(searchParams.has('error')){
+         err = document.createTextNode(searchParams.get('error'));
+         $('#error-login').append(err);
+         $('#error-login').show();
+     }
+     if(searchParams.has('message')){
+         msg = document.createTextNode(searchParams.get('message'));
+         $('#email-sent').append(msg);
+         $('#email-sent').show();
+     }
+  }
+}
+
+$(document).on( 'click', '#btnGetPin', function(e) {
+  $(".tooltipster-box #password-text-field").val("");
+  submitCaptcha(e);
+});
+
+$(document).on( 'click', '#btnDisableAds', function(e) {
+  submitCaptcha(e);
+});
+  </script>
+  <script type="text/javascript">
+   function switchColorTheme(){
+		var userTheme = localStorage.ColorTheme;
+		if (userTheme == undefined) {userTheme = 'default'; localStorage.ColorTheme = userTheme};
+		if ((userTheme == 'dark') || (userTheme == 'light')) {
+			document.documentElement.setAttribute('data-theme', userTheme);}
+		else if (!window.matchMedia) {
+			document.documentElement.setAttribute('data-theme', 'light');}
+		else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-theme', 'dark');}
+			else {
+				document.documentElement.setAttribute('data-theme', 'light');}
+   };
+	switchColorTheme();
+$(document).ready(function(){
+touchHover(); loadErrors();
+	var data = localStorage.ShowFluff;
+	if (data == undefined) {data = 'true'; localStorage.ShowFluff = data};
+
+	var StrData; if (data == 'true') {StrData = true} else {StrData = false};
+	$('.ShowFluff').prop('checked', StrData);
+	ChangeShowFluff();
+
+	$('.ShowFluff').change(function () {
+      localStorage.ShowFluff = $(this).prop('checked');
+	   ChangeShowFluff();
+   });
+
+	function ChangeShowFluff() {
+	if (localStorage.ShowFluff == 'true')
+		{$('.ShowFluff').css('display', '');}
+	else
+		{$('.ShowFluff').css('display', 'none');}
+	}
+	var data = localStorage.ShowLegendaryDatasheets;
+	if (data == undefined) {data = 'false'; localStorage.ShowLegendaryDatasheets = data};
+
+	var StrData; if (data == 'true') {StrData = true} else {StrData = false};
+	$('.ShowLegendaryDatasheets').prop('checked', StrData);
+
+	$('.ShowLegendaryDatasheets').change(function () {
+      localStorage.ShowLegendaryDatasheets = $(this).prop('checked');
+	   FilterApply(false);
+   });
+	var data = localStorage.ShowPathToGlory;
+	if (data == undefined) {data = 'true'; localStorage.ShowPathToGlory = data};
+
+	var StrData; if (data == 'true') {StrData = true} else {StrData = false};
+	$('.ShowPathToGlory').prop('checked', StrData);
+
+	$('.ShowPathToGlory').change(function () {
+      localStorage.ShowPathToGlory = $(this).prop('checked');
+	   FilterApply(false);
+   });
+	var data = localStorage.ShowPitchedBattleProfile;
+	if (data == undefined) {data = 'true'; localStorage.ShowPitchedBattleProfile = data};
+
+	var StrData; if (data == 'true') {StrData = true} else {StrData = false};
+	$('.ShowPitchedBattleProfile').prop('checked', StrData);
+	ChangeShowPitchedBattleProfile();
+
+	$('.ShowPitchedBattleProfile').change(function () {
+      localStorage.ShowPitchedBattleProfile = $(this).prop('checked');
+	   ChangeShowPitchedBattleProfile();
+   });
+
+	function ChangeShowPitchedBattleProfile() {
+	if (localStorage.ShowPitchedBattleProfile == 'true')
+		{$('.ShowPitchedBattleProfile').css('display', '');}
+	else
+		{$('.ShowPitchedBattleProfile').css('display', 'none');}
+	}
+	var data = localStorage.ShowBaseSize;
+	if (data == undefined) {data = 'true'; localStorage.ShowBaseSize = data};
+
+	var StrData; if (data == 'true') {StrData = true} else {StrData = false};
+	$('.ShowBaseSize').prop('checked', StrData);
+	ChangeShowBaseSize();
+
+	$('.ShowBaseSize').change(function () {
+      localStorage.ShowBaseSize = $(this).prop('checked');
+	   ChangeShowBaseSize();
+   });
+
+	function ChangeShowBaseSize() {
+	if (localStorage.ShowBaseSize == 'true')
+		{$('.ShowBaseSize').css('display', '');}
+	else
+		{$('.ShowBaseSize').css('display', 'none');}
+	}
+	var data = localStorage.ShowForgeWorldDatasheets;
+	if (data == undefined) {data = 'true'; localStorage.ShowForgeWorldDatasheets = data};
+
+	var StrData; if (data == 'true') {StrData = true} else {StrData = false};
+	$('.ShowForgeWorldDatasheets').prop('checked', StrData);
+
+	$('.ShowForgeWorldDatasheets').change(function () {
+      localStorage.ShowForgeWorldDatasheets = $(this).prop('checked');
+	   FilterSelect(false);
+	   FilterApply(false);
+   });
+	$('.ColorTheme').prop('value', localStorage.ColorTheme);
+	$('.ColorTheme').change(function () {
+		localStorage.ColorTheme = $(this).prop('value');
+		switchColorTheme();
+	});	
+	$(window).on('load', function() {
+		$('.ya-site-form__input-text').addClass('ya_input');
+	});
+
+
+function FilterSelect(IsInit) {};
+function FilterApply(IsInit) {
+var clFlags = '';
+var comma = '';
+var clAllFlags = '.sLegendary, .sForgeWorld, .sShowPathToGlory';
+if (localStorage.ShowLegendaryDatasheets == 'false') {clFlags = clFlags + comma + '.sLegendary'; comma = ', ';};
+if (localStorage.ShowPathToGlory == 'false') {clFlags = clFlags + comma + '.sShowPathToGlory'; comma = ', ';};
+if (localStorage.ShowForgeWorldDatasheets == 'false') {clFlags = clFlags + comma + '.sForgeWorld'; comma = ', ';};
+
+	$(clAllFlags).show();
+	$(clFlags).hide();
+
+UpdateTooltipster(IsInit);
+};
+FilterApply(true);
+
+function UpdateTooltipster(IsInit) {
+if (!IsInit) 
+	{
+	 $('.tooltip').filter('.tooltipstered').tooltipster('destroy');
+	 $('.tooltipArmyList').filter('.tooltipstered').tooltipster('destroy');
+	 $('.tooltipContents').filter('.tooltipstered').tooltipster('destroy');
+	 var arrTT = [{tCl:"00001"},{tCl:"00002"},{tCl:"00003"},{tCl:"00004"},{tCl:"00005"},{tCl:"00006"},{tCl:"00007"},{tCl:"00008"},{tCl:"00009"},{tCl:"CHAOS"},{tCl:"HEDONITESOFSLAANESH"},{tCl:"MORTAL"},{tCl:"SLAANESH"},{tCl:"HERO"},{tCl:"WIZARD"},{tCl:"00016"},{tCl:"00017"},{tCl:"00018"},{tCl:"DAEMON"},{tCl:"MONSTER"},{tCl:"KEEPEROFSECRETS"},{tCl:"00022"},{tCl:"00023"},{tCl:"00024"},{tCl:"00025"},{tCl:"00026"},{tCl:"00027"},{tCl:"00028"},{tCl:"UNDIVIDED"},{tCl:"00030"},{tCl:"00031"},{tCl:"DAEMONETTE"},{tCl:"TOTEM"},{tCl:"HERALDOFSLAANESH"},{tCl:"EXALTEDCHARIOT"},{tCl:"BLADEBRINGER"},{tCl:"00037"},{tCl:"HELLFLAYER"},{tCl:"00039"},{tCl:"00040"},{tCl:"SEEKERCHARIOT"},{tCl:"00042"},{tCl:"00043"},{tCl:"CHARIOTOFSLAANESH"},{tCl:"HELLSTRIDERS"},{tCl:"00046"},{tCl:"MARKOFCHAOS"},{tCl:"00048"},{tCl:"00049"},{tCl:"00050"},{tCl:"00051"},{tCl:"00052"},{tCl:"00053"}];arrTT.forEach(function(item, i, arr) {
+$('.tooltip'+item.tCl).filter('.tooltipstered').tooltipster('destroy');
+});
+	 if ($(window).width() >= 800) {
+	$('.no_tooltip').addClass('tooltip').removeClass('no_tooltip');
+	sidesArr = ['top', 'bottom', 'left', 'right'];
+	}
+else {
+	sidesArr = ['top', 'bottom'];
+	}
+;
+sidesArrButt = ['left'];
+$('.tooltip_').addClass('tooltip').removeClass('tooltip_');
+$('.tooltip:hidden').addClass('tooltip_').removeClass('tooltip');
+$('.wTable:visible').each(function (index1, element1) {
+	var trg = true;
+	$(element1).children('.bkg:visible').each(function (index2, element2) {
+		if (trg) {$(element2).addClass('bkg0').removeClass('bkg1')}
+		else {$(element2).addClass('bkg1').removeClass('bkg0')};
+		trg = !trg;
+		if ($(element2).hasClass('bkg_reset')) {trg = true};
+	});
+});
+
+$('.tooltip').tooltipster({
+functionBefore: function(instance, helper){
+$.each($.tooltipster.instances(), function(i, instance){
+	instance.close();
+});
+},
+plugins: ['sideTip', 'scrollableTip'],
+contentCloning: true,
+position: sidesArr,
+restoration: 'current',
+maxWidth: 600,
+viewportAware: true,
+repositionOnScroll: false,
+trigger: 'custom',
+triggerOpen: {
+    mouseenter: true,
+    tap: true
+},
+triggerClose: {
+    click: true,
+	 mouseleave: true,
+    tap: true
+}
+});
+$('.tooltipContents').tooltipster({
+functionBefore: function(instance, helper){
+$.each($.tooltipster.instances(), function(i, instance){
+	instance.close();
+});
+},
+plugins: ['sideTip', 'scrollableTip'],
+position: 'left',
+restoration: 'current',
+viewportAware: true,
+arrow: false,
+positionTracker: true,
+contentCloning: true,
+repositionOnScroll: false,
+maxWidth: 1100,
+trigger: 'custom',
+triggerOpen: {
+    mouseenter: true,
+    tap: true
+},
+triggerClose: {
+    click: true,
+	 mouseleave: true,
+    tap: true
+}
+});
+$('.tooltipArmyList').tooltipster({
+functionBefore: function(instance, helper){
+$.each($.tooltipster.instances(), function(i, instance){
+	instance.close();
+});
+},
+plugins: ['sideTip', 'scrollableTip'],
+position: 'left',
+restoration: 'current',
+viewportAware: true,
+arrow: false,
+positionTracker: true,
+contentCloning: true,
+repositionOnScroll: false,
+maxWidth: 1100,
+trigger: 'custom',
+triggerOpen: {
+    mouseenter: true,
+    tap: true
+},
+triggerClose: {
+    click: true,
+	 mouseleave: true,
+    tap: true
+}
+});
+	 var arrTT = [{tCl:"00001"},{tCl:"00002"},{tCl:"00003"},{tCl:"00004"},{tCl:"00005"},{tCl:"00006"},{tCl:"00007"},{tCl:"00008"},{tCl:"00009"},{tCl:"CHAOS"},{tCl:"HEDONITESOFSLAANESH"},{tCl:"MORTAL"},{tCl:"SLAANESH"},{tCl:"HERO"},{tCl:"WIZARD"},{tCl:"00016"},{tCl:"00017"},{tCl:"00018"},{tCl:"DAEMON"},{tCl:"MONSTER"},{tCl:"KEEPEROFSECRETS"},{tCl:"00022"},{tCl:"00023"},{tCl:"00024"},{tCl:"00025"},{tCl:"00026"},{tCl:"00027"},{tCl:"00028"},{tCl:"UNDIVIDED"},{tCl:"00030"},{tCl:"00031"},{tCl:"DAEMONETTE"},{tCl:"TOTEM"},{tCl:"HERALDOFSLAANESH"},{tCl:"EXALTEDCHARIOT"},{tCl:"BLADEBRINGER"},{tCl:"00037"},{tCl:"HELLFLAYER"},{tCl:"00039"},{tCl:"00040"},{tCl:"SEEKERCHARIOT"},{tCl:"00042"},{tCl:"00043"},{tCl:"CHARIOTOFSLAANESH"},{tCl:"HELLSTRIDERS"},{tCl:"00046"},{tCl:"MARKOFCHAOS"},{tCl:"00048"},{tCl:"00049"},{tCl:"00050"},{tCl:"00051"},{tCl:"00052"},{tCl:"00053"}];arrTT.forEach(function(item, i, arr) {
+$('.tooltip'+item.tCl).on('mouseover', function(){
+	var tooltipInstance;
+	if (!$(this).hasClass('tooltipstered')) 
+		{tooltipInstance = $(this).tooltipster({plugins:['sideTip','scrollableTip'],contentCloning:true,position:sidesArr,restoration:'current',maxWidth:600,viewportAware:true,repositionOnScroll:false,trigger:'custom',triggerOpen:{mouseenter:true,tap:true},triggerClose:{click:true,mouseleave:true,tap:true}}); tooltipInstance.tooltipster('open')}
+	});
+});}
+};
+if ($(window).width() >= 800) {
+	$('.no_tooltip').addClass('tooltip').removeClass('no_tooltip');
+	sidesArr = ['top', 'bottom', 'left', 'right'];
+	}
+else {
+	sidesArr = ['top', 'bottom'];
+	}
+;
+sidesArrButt = ['left'];
+$('.tooltip_').addClass('tooltip').removeClass('tooltip_');
+$('.tooltip:hidden').addClass('tooltip_').removeClass('tooltip');
+$('.wTable:visible').each(function (index1, element1) {
+	var trg = true;
+	$(element1).children('.bkg:visible').each(function (index2, element2) {
+		if (trg) {$(element2).addClass('bkg0').removeClass('bkg1')}
+		else {$(element2).addClass('bkg1').removeClass('bkg0')};
+		trg = !trg;
+		if ($(element2).hasClass('bkg_reset')) {trg = true};
+	});
+});
+
+$('.tooltip').tooltipster({
+functionBefore: function(instance, helper){
+$.each($.tooltipster.instances(), function(i, instance){
+	instance.close();
+});
+},
+plugins: ['sideTip', 'scrollableTip'],
+contentCloning: true,
+position: sidesArr,
+restoration: 'current',
+maxWidth: 600,
+viewportAware: true,
+repositionOnScroll: false,
+trigger: 'custom',
+triggerOpen: {
+    mouseenter: true,
+    tap: true
+},
+triggerClose: {
+    click: true,
+	 mouseleave: true,
+    tap: true
+}
+});
+$('.tooltipContents').tooltipster({
+functionBefore: function(instance, helper){
+$.each($.tooltipster.instances(), function(i, instance){
+	instance.close();
+});
+},
+plugins: ['sideTip', 'scrollableTip'],
+position: 'left',
+restoration: 'current',
+viewportAware: true,
+arrow: false,
+positionTracker: true,
+contentCloning: true,
+repositionOnScroll: false,
+maxWidth: 1100,
+trigger: 'custom',
+triggerOpen: {
+    mouseenter: true,
+    tap: true
+},
+triggerClose: {
+    click: true,
+	 mouseleave: true,
+    tap: true
+}
+});
+$('.tooltipArmyList').tooltipster({
+functionBefore: function(instance, helper){
+$.each($.tooltipster.instances(), function(i, instance){
+	instance.close();
+});
+},
+plugins: ['sideTip', 'scrollableTip'],
+position: 'left',
+restoration: 'current',
+viewportAware: true,
+arrow: false,
+positionTracker: true,
+contentCloning: true,
+repositionOnScroll: false,
+maxWidth: 1100,
+trigger: 'custom',
+triggerOpen: {
+    mouseenter: true,
+    tap: true
+},
+triggerClose: {
+    click: true,
+	 mouseleave: true,
+    tap: true
+}
+});
+var arrTT = [{tCl:"00001"},{tCl:"00002"},{tCl:"00003"},{tCl:"00004"},{tCl:"00005"},{tCl:"00006"},{tCl:"00007"},{tCl:"00008"},{tCl:"00009"},{tCl:"CHAOS"},{tCl:"HEDONITESOFSLAANESH"},{tCl:"MORTAL"},{tCl:"SLAANESH"},{tCl:"HERO"},{tCl:"WIZARD"},{tCl:"00016"},{tCl:"00017"},{tCl:"00018"},{tCl:"DAEMON"},{tCl:"MONSTER"},{tCl:"KEEPEROFSECRETS"},{tCl:"00022"},{tCl:"00023"},{tCl:"00024"},{tCl:"00025"},{tCl:"00026"},{tCl:"00027"},{tCl:"00028"},{tCl:"UNDIVIDED"},{tCl:"00030"},{tCl:"00031"},{tCl:"DAEMONETTE"},{tCl:"TOTEM"},{tCl:"HERALDOFSLAANESH"},{tCl:"EXALTEDCHARIOT"},{tCl:"BLADEBRINGER"},{tCl:"00037"},{tCl:"HELLFLAYER"},{tCl:"00039"},{tCl:"00040"},{tCl:"SEEKERCHARIOT"},{tCl:"00042"},{tCl:"00043"},{tCl:"CHARIOTOFSLAANESH"},{tCl:"HELLSTRIDERS"},{tCl:"00046"},{tCl:"MARKOFCHAOS"},{tCl:"00048"},{tCl:"00049"},{tCl:"00050"},{tCl:"00051"},{tCl:"00052"},{tCl:"00053"}];arrTT.forEach(function(item, i, arr) {
+$('.tooltip'+item.tCl).on('mouseover', function(){
+	var tooltipInstance;
+	if (!$(this).hasClass('tooltipstered')) 
+		{tooltipInstance = $(this).tooltipster({plugins:['sideTip','scrollableTip'],contentCloning:true,position:sidesArr,restoration:'current',maxWidth:600,viewportAware:true,repositionOnScroll:false,trigger:'custom',triggerOpen:{mouseenter:true,tap:true},triggerClose:{click:true,mouseleave:true,tap:true}}); tooltipInstance.tooltipster('open')}
+	});
+});
+
+});
+$.tooltipster.setDefaults({
+arrow: true,
+delay: [200, 200],
+interactive: true,
+theme: ['tooltipster-noir', 'tooltipster-noir-customized']
+});
+  </script>
+  <script type="text/javascript">
+   var touchHover = function() {
+    $('.tooltip').on('touchstart', function(e) {
+          e.preventDefault();
+          return false;
+    });
+};
+$(document).ready(function() { touchHover(); });
+  </script>
+  <link href="https://wahapedia.ru/aos3/factions/hedonites-of-slaanesh/warscrolls.html" rel="canonical"/>
+  <script type="text/javascript">
+   var ezoTemplate = 'orig_site';
+var ezouid = '1';
+var ezoFormfactor = '1';
+  </script>
+  <script data-ezscrex="false" type="text/javascript">
+   var soc_app_id = '0';
+var did = 422626;
+var ezdomain = 'wahapedia.ru';
+var ezoicSearchable = 1;
+  </script>
+  <script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+   var _ezaq = window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ab_test_id":"mod158-c","ad_cache_level":1,"ad_lazyload_version":0,"ad_load_version":0,"city":"Melbourne","country":"AU","days_since_last_visit":-1,"domain_id":422626,"engaged_time_visit":0,"ezcache_level":0,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"is_embed":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"metro_code":0,"page_ad_positions":"","page_view_count":0,"page_view_id":"722ebd4b-80b6-406f-4c7f-cb3bb8afa49c","position_selection_id":0,"postal_code":"3001","pv_event_count":0,"response_size_orig":593104,"response_time_orig":1822,"serverid":"i-0e332cd5a99bcd2e1","state":"VIC","t_epoch":1697026733,"template_id":5,"time_on_site_visit":0,"url":"https://wahapedia.ru/aos3/factions/hedonites-of-slaanesh/warscrolls.html","weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":23938,"worst_bad_word_level":0});var _ezExtraQueries = "&ez_orig=1";
+  </script>
+  <script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+   function create_ezolpl() {
+	var d = new Date();
+	d.setTime(d.getTime() + (365*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	__ez.ck.setByCat("ezux_lpl_422626=" + new Date().getTime() + "|" + _ezaq.page_view_id + "|" + _ezaq.is_return_visitor + "; " + expires, 3);
+}
+function attach_ezolpl() {
+	if (document.readyState === "complete") {
+		create_ezolpl();
+		return;
+	}
+	window.addEventListener("load", create_ezolpl);
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", null, false, ['/detroitchicago/boise.js'], true, false, false, false);
+  </script>
+ </head>
+ <body>
+  <!--noindex-->
+  <div id="wrapper2">
+   <div class="noprint">
+    <div id="ezoic-pub-ad-placeholder-147">
+    </div>
+   </div>
+   <div id="wrapper">
+    <div class="noprint">
+     <div style="position:relative">
+      <div class="SiteHeader_wrapper">
+       <div class="SiteHeader">
+        <a href="/">
+         <div class="SiteHeader_A">
+         </div>
+        </a>
+       </div>
+      </div>
+      <div class="NavWrapper_M">
+       <div class="NavDropdown_Search">
+        <div class="NavBtn_Search">
+        </div>
+        <div class="NavDropdown-content_Search">
+         <div class="yandex_search_line_short">
+          <div class="ya-site-form ya-site-form_inited_no" data-bem='{"action":"//wahapedia.ru/aos3/search.html","arrow":false,"bg":"transparent","fontsize":16,"fg":"#000000","language":"en","logo":"rb","publicname":"Yandex Site Search #2484164","suggest":true,"target":"_blank","tld":"com","type":2,"usebigdictionary":true,"searchid":2484164,"input_fg":"#000000","input_bg":"#ffffff","input_fontStyle":"normal","input_fontWeight":"normal","input_placeholder":"Search this site...","input_placeholderColor":"#999999","input_borderColor":"#7f9db9"}'>
+           <form accept-charset="utf-8" action="https://yandex.com/search/site/" method="get" target="_blank">
+            <input name="searchid" type="hidden" value="2484164"/>
+            <input name="l10n" type="hidden" value="en"/>
+            <input name="reqenc" type="hidden" value=""/>
+            <input name="text" type="search" value=""/>
+            <input type="submit" value="Search"/>
+           </form>
+          </div>
+          <style type="text/css">
+           .ya-page_js_yes .ya-site-form_inited_no { display: none; }
+          </style>
+          <script type="text/javascript">
+           (function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');
+          </script>
+         </div>
+        </div>
+       </div>
+       <div class="NavDropdown_A">
+        <div class="NavBtn_A">
+        </div>
+        <div class="NavDropdown-content_A">
+         <div class="FactionHeader">
+         </div>
+         <a href="/aos3/the-rules/about">
+          About
+         </a>
+        </div>
+       </div>
+       <div class="NavDropdown_S">
+        <div class="NavBtn_S">
+        </div>
+        <div class="NavDropdown-content_S">
+         <div class="armylist_header">
+          Settings
+         </div>
+         <div style="clear:both">
+         </div>
+         <label class="container">
+          <input checked="true" class="ShowForgeWorldDatasheets" type="checkbox"/>
+          <span class="checkmark">
+          </span>
+          Show Forge World warscrolls
+         </label>
+         <label class="container">
+          <input checked="true" class="ShowLegendaryDatasheets" type="checkbox"/>
+          <span class="checkmark">
+          </span>
+          Show Legends and not recommended rules/warscrolls
+         </label>
+         <label class="container">
+          <input checked="true" class="ShowFluff" type="checkbox"/>
+          <span class="checkmark">
+          </span>
+          Show fluff text
+         </label>
+         <label class="container">
+          <input checked="true" class="ShowPathToGlory" type="checkbox"/>
+          <span class="checkmark">
+          </span>
+          Show Path to Glory rules
+         </label>
+         <label class="container">
+          <input checked="true" class="ShowPitchedBattleProfile" type="checkbox"/>
+          <span class="checkmark">
+          </span>
+          Show Pitched Battle Profile
+         </label>
+         <label class="container" style="margin-left:22px">
+          <input checked="true" class="ShowBaseSize" type="checkbox"/>
+          <span class="checkmark">
+          </span>
+          Show base size
+         </label>
+         <label class="container" style="padding-left:0px">
+          Color theme:
+          <select class="ctrlSelect ColorTheme" size="1">
+           <option class="ctrlOption" value="default">
+            OS default
+           </option>
+           <option class="ctrlOption" value="light">
+            Bright
+           </option>
+           <option class="ctrlOption" value="dark">
+            Dark
+           </option>
+          </select>
+         </label>
+        </div>
+       </div>
+       <div class="NavDropdown">
+        <div class="NavBtn NavBtn_TheRules">
+         The Rules
+        </div>
+        <div class="NavDropdown-content">
+         <div class="FactionHeader">
+         </div>
+         <a href="/aos3/the-rules/playing-this-game">
+          Playing This Game
+         </a>
+         <a href="/aos3/the-rules/the-core-rules">
+          The Core Rules
+         </a>
+         <a href="/aos3/the-rules/conquest-unbound">
+          Conquest Unbound
+         </a>
+         <a href="/aos3/the-rules/open-play-games">
+          Open Play Games
+         </a>
+         <a href="/aos3/the-rules/matched-play-games">
+          Matched Play Games
+         </a>
+         <a href="/aos3/the-rules/narrative-play-games">
+          Narrative Play Games
+         </a>
+         <div class="NavColumns_indent_solid">
+          <br/>
+         </div>
+         <div class="BreakInsideAvoid">
+          <div class="FactionHeader">
+           General?s Handbooks
+          </div>
+          <a href="/aos3/the-rules/pitched-battles-2021">
+           Pitched Battles 2021
+          </a>
+          <a href="/aos3/the-rules/pitched-battles-22-23-s1">
+           Pitched Battles ?22-23 S1
+          </a>
+          <a href="/aos3/the-rules/pitched-battles-22-23-s2">
+           Pitched Battles ?22-23 S2
+          </a>
+          <a href="/aos3/the-rules/pitched-battles-2023-24">
+           Pitched Battles 2023-24
+          </a>
+          <div class="NavColumns_indent_solid">
+           <br/>
+          </div>
+         </div>
+         <div class="BreakInsideAvoid">
+          <div class="FactionHeader">
+           Seasons of War
+          </div>
+          <a href="/aos3/the-rules/thondia">
+           Thondia
+          </a>
+          <div class="NavColumns_indent_solid">
+           <br/>
+          </div>
+         </div>
+         <div class="BreakInsideAvoid">
+          <div class="FactionHeader">
+           Campaigns
+          </div>
+          <a href="/aos3/the-rules/dawnbringers">
+           Dawnbringers
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="NavDropdown">
+        <div class="NavBtn NavBtn_Factions">
+         Factions
+        </div>
+        <div class="NavDropdown-content">
+         <div class="NavColumns3">
+          <div class="BreakInsideAvoid">
+           <div class="FactionHeader">
+            Order
+           </div>
+           <a href="/aos3/factions/cities-of-sigmar">
+            Cities of Sigmar
+           </a>
+           <a href="/aos3/factions/daughters-of-khaine">
+            Daughters of Khaine
+           </a>
+           <a href="/aos3/factions/fyreslayers">
+            Fyreslayers
+           </a>
+           <a href="/aos3/factions/idoneth-deepkin">
+            Idoneth Deepkin
+           </a>
+           <a href="/aos3/factions/kharadron-overlords">
+            Kharadron Overlords
+           </a>
+           <a href="/aos3/factions/lumineth-realm-lords">
+            Lumineth Realm-lords
+           </a>
+           <a href="/aos3/factions/seraphon">
+            Seraphon
+           </a>
+           <a href="/aos3/factions/stormcast-eternals">
+            Stormcast Eternals
+           </a>
+           <a href="/aos3/factions/sylvaneth">
+            Sylvaneth
+           </a>
+           <div class="NavColumns_indent">
+           </div>
+          </div>
+          <div class="BreakInsideAvoid">
+           <div class="FactionHeader">
+            Chaos
+           </div>
+           <a href="/aos3/factions/beasts-of-chaos">
+            Beasts of Chaos
+           </a>
+           <a href="/aos3/factions/blades-of-khorne">
+            Blades of Khorne
+           </a>
+           <a href="/aos3/factions/disciples-of-tzeentch">
+            Disciples of Tzeentch
+           </a>
+           <a href="/aos3/factions/hedonites-of-slaanesh">
+            Hedonites of Slaanesh
+           </a>
+           <a class="clFl sLegendary sForgeWorld" href="/aos3/factions/legion-of-azgorh">
+            Legion of Azgorh
+           </a>
+           <a href="/aos3/factions/maggotkin-of-nurgle">
+            Maggotkin of Nurgle
+           </a>
+           <a href="/aos3/factions/skaven">
+            Skaven
+           </a>
+           <a href="/aos3/factions/slaves-to-darkness">
+            Slaves to Darkness
+           </a>
+           <div class="NavColumns_indent">
+           </div>
+          </div>
+          <div class="NavColumns_indent2">
+          </div>
+          <div class="BreakInsideAvoid">
+           <div class="FactionHeader">
+            Death
+           </div>
+           <a href="/aos3/factions/flesh-eater-courts">
+            Flesh-eater Courts
+           </a>
+           <a href="/aos3/factions/nighthaunt">
+            Nighthaunt
+           </a>
+           <a href="/aos3/factions/ossiarch-bonereapers">
+            Ossiarch Bonereapers
+           </a>
+           <a href="/aos3/factions/soulblight-gravelords">
+            Soulblight Gravelords
+           </a>
+           <div class="NavColumns_indent">
+           </div>
+          </div>
+          <div class="BreakInsideAvoid">
+           <div class="FactionHeader">
+            Destruction
+           </div>
+           <a href="/aos3/factions/gloomspite-gitz">
+            Gloomspite Gitz
+           </a>
+           <a href="/aos3/factions/ogor-mawtribes">
+            Ogor Mawtribes
+           </a>
+           <a href="/aos3/factions/orruk-warclans">
+            Orruk Warclans
+           </a>
+           <a href="/aos3/factions/sons-of-behemat">
+            Sons of Behemat
+           </a>
+           <div class="NavColumns_indent">
+           </div>
+          </div>
+          <div class="NavColumns_indent2">
+          </div>
+          <div class="BreakInsideAvoid">
+           <div class="FactionHeader">
+            Other
+           </div>
+           <a href="/aos3/factions/endless-spells">
+            Endless Spells
+           </a>
+           <a href="/aos3/factions/incarnates">
+            Incarnates
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="NavUnderline_M">
+      </div>
+      <div class="logoBW_float">
+       <a href="https://boosty.to/wahapedia" target="_blank">
+        <div class="boosty_logoBW no_tooltip" title="Support on Boosty">
+        </div>
+       </a>
+       <a class="noads_logoBW tooltip" data-tooltip-content="#tooltip_contentLoginForm">
+       </a>
+       <div class="slide-bottom" id="error-login">
+       </div>
+       <div class="slide-bottom" id="email-sent">
+       </div>
+      </div>
+     </div>
+     <div class="yandex_search_line yandex_search_line_show">
+      <div class="ya-site-form ya-site-form_inited_no" data-bem='{"action":"//wahapedia.ru/aos3/search.html","arrow":false,"bg":"transparent","fontsize":16,"fg":"#000000","language":"en","logo":"rb","publicname":"Yandex Site Search #2484164","suggest":true,"target":"_blank","tld":"com","type":2,"usebigdictionary":true,"searchid":2484164,"input_fg":"#000000","input_bg":"#ffffff","input_fontStyle":"normal","input_fontWeight":"normal","input_placeholder":"Search this site...","input_placeholderColor":"#999999","input_borderColor":"#7f9db9"}'>
+       <form accept-charset="utf-8" action="https://yandex.com/search/site/" method="get" target="_blank">
+        <input name="searchid" type="hidden" value="2484164"/>
+        <input name="l10n" type="hidden" value="en"/>
+        <input name="reqenc" type="hidden" value=""/>
+        <input name="text" type="search" value=""/>
+        <input type="submit" value="Search"/>
+       </form>
+      </div>
+      <style type="text/css">
+       .ya-page_js_yes .ya-site-form_inited_no { display: none; }
+      </style>
+      <script type="text/javascript">
+       (function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');
+      </script>
+     </div>
+     <div style="clear:both">
+     </div>
+    </div>
+    <div class="page_header2">
+     <span class="page_header_span2 kwbu tooltip" data-tooltip-content="#tooltip_contentFactionRules">
+      Hedonites of Slaanesh
+     </span>
+     <span class="page_header_span2">
+      ? Warscrolls
+     </span>
+    </div>
+    <div class="noprint">
+    </div>
+    <!--/noindex-->
+    <div style="display:flex;justify-content:center;align-items:center;">
+     <div class="BreakInsideAvoid Corner3" style="padding:0px;max-width:100%;">
+      <table border="0" cellpadding="0" cellspacing="0" class="frameDark collapse">
+       <tbody>
+        <tr>
+         <td background="/aos3/img/corners/Corner3_1.png" style="width:20px;height:20px">
+         </td>
+         <td background="/aos3/img/corners/Corner3_2.png" style="height:20px">
+         </td>
+         <td background="/aos3/img/corners/Corner3_3.png" style="width:20px;height:20px">
+         </td>
+        </tr>
+        <tr>
+         <td background="/aos3/img/corners/Corner3_8.png" style="width:20px">
+         </td>
+         <td bgcolor="#1d190d">
+          <span style="font-family:georgia,serif; font-size:1em">
+           <div class="contents_header">
+            Contents
+           </div>
+           <div class="NavColumns3">
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 L
+                </b>
+                eader, Behemoth
+               </span>
+              </div>
+              <div class="mw2 i30">
+               <span class="bl1">
+                ?
+               </span>
+               <a class="contentColorInv" href="#Glutos-Orscollion-Lord-of-Gluttony">
+                Glutos Orscollion, Lord of Gluttony
+               </a>
+              </div>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Keeper-of-Secrets">
+               Keeper of Secrets
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Shalaxi-Helbane">
+               Shalaxi Helbane
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <img class="tooltip logo2" src="/aos3/img/expansions/StD_logo2.png" title="Battletome. Slaves to Darkness (3rd edition, version 1.5)"/>
+              <a class="contentColorInv" href="#Archaon-the-Everchosen">
+               Archaon the Everchosen
+              </a>
+             </div>
+             <div class="clFl sLegendary sForgeWorld mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <img class="tooltip logo2" src="/aos3/img/expansions/FW_AoS_logo2.png" title="Expansion. Compendium: Monstrous Arcanum (3rd edition)"/>
+              <a class="contentColorInv" href="#Soulfeaster-Keeper-of-Secrets">
+               Soulfeaster Keeper of Secrets
+              </a>
+             </div>
+            </div>
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 L
+                </b>
+                eader
+               </span>
+              </div>
+              <div class="mw2 i30">
+               <span class="bl1">
+                ?
+               </span>
+               <a class="contentColorInv" href="#Bladebringer-Herald-on-Exalted-Chariot">
+                Bladebringer, Herald on Exalted Chariot
+               </a>
+              </div>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Bladebringer-Herald-on-Hellflayer">
+               Bladebringer, Herald on Hellflayer
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Bladebringer-Herald-on-Seeker-Chariot">
+               Bladebringer, Herald on Seeker Chariot
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Contorted-Epitome">
+               Contorted Epitome
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Dexcessa-the-Talon-of-Slaanesh">
+               Dexcessa, the Talon of Slaanesh
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Infernal-Enrapturess-Herald-of-Slaanesh">
+               Infernal Enrapturess, Herald of Slaanesh
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Lord-of-Hubris">
+               Lord of Hubris
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Lord-of-Pain">
+               Lord of Pain
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Shardspeaker-of-Slaanesh">
+               Shardspeaker of Slaanesh
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Sigvald-Prince-of-Slaanesh">
+               Sigvald, Prince of Slaanesh
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Syll-Esske-the-Vengeful-Allegiance">
+               Syll?Esske, the Vengeful Allegiance
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Synessa-the-Voice-of-Slaanesh">
+               Synessa, the Voice of Slaanesh
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#The-Masque">
+               The Masque
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Viceleader-Herald-of-Slaanesh">
+               Viceleader, Herald of Slaanesh
+              </a>
+             </div>
+            </div>
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 B
+                </b>
+                attleline
+               </span>
+              </div>
+              <div class="mw2 i30">
+               <span class="bl1">
+                ?
+               </span>
+               <a class="contentColorInv" href="#Blissbarb-Archers">
+                Blissbarb Archers
+               </a>
+              </div>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Daemonettes">
+               Daemonettes
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Seekers">
+               Seekers
+              </a>
+             </div>
+            </div>
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 N
+                </b>
+                one
+               </span>
+              </div>
+              <div class="mw2 i30">
+               <span class="bl1">
+                ?
+               </span>
+               <a class="contentColorInv" href="#Blissbarb-Seekers">
+                Blissbarb Seekers
+               </a>
+              </div>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Exalted-Chariot">
+               Exalted Chariot
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Fiends">
+               Fiends
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Hellflayer">
+               Hellflayer
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Hellstriders-with-Claw-spears">
+               Hellstriders with Claw-spears
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Hellstriders-with-Hellscourges">
+               Hellstriders with Hellscourges
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Myrmidesh-Painbringers">
+               Myrmidesh Painbringers
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Seeker-Chariot">
+               Seeker Chariot
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Slaangor-Fiendbloods">
+               Slaangor Fiendbloods
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Slickblade-Seekers">
+               Slickblade Seekers
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Symbaresh-Twinsouls">
+               Symbaresh Twinsouls
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#The-Dread-Pageant">
+               The Dread Pageant
+              </a>
+             </div>
+             <div class="clFl sLegendary sForgeWorld mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <img class="tooltip logo2" src="/aos3/img/expansions/FWL_Aos_logo2.png" title="Expansion. Warhammer Legends: Monstrous Arcanum (3rd edition)"/>
+              <a class="contentColorInv" href="#Skin-Wolves">
+               Skin Wolves
+              </a>
+             </div>
+            </div>
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 B
+                </b>
+                ehemoth
+               </span>
+              </div>
+              <div class="clFl sLegendary sForgeWorld mw2 i30">
+               <span class="bl1">
+                ?
+               </span>
+               <img class="tooltip logo2" src="/aos3/img/expansions/FWL_Aos_logo2.png" title="Expansion. Warhammer Legends: Monstrous Arcanum (3rd edition)"/>
+               <a class="contentColorInv" href="#Chaos-Siege-Gargant">
+                Chaos Siege Gargant
+               </a>
+              </div>
+             </div>
+             <div class="clFl sLegendary sForgeWorld mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <img class="tooltip logo2" src="/aos3/img/expansions/FWL_Aos_logo2.png" title="Expansion. Warhammer Legends: Monstrous Arcanum (3rd edition)"/>
+              <a class="contentColorInv" href="#Chaos-War-Mammoth">
+               Chaos War Mammoth
+              </a>
+             </div>
+             <div class="clFl sLegendary sForgeWorld mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <img class="tooltip logo2" src="/aos3/img/expansions/FWL_Aos_logo2.png" title="Expansion. Warhammer Legends: Monstrous Arcanum (3rd edition)"/>
+              <a class="contentColorInv" href="#Curs-d-Ettin">
+               Curs?d Ettin
+              </a>
+             </div>
+             <div class="clFl sLegendary sForgeWorld mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <img class="tooltip logo2" src="/aos3/img/expansions/FWL_Aos_logo2.png" title="Expansion. Warhammer Legends: Monstrous Arcanum (3rd edition)"/>
+              <a class="contentColorInv" href="#Gigantic-Chaos-Spawn">
+               Gigantic Chaos Spawn
+              </a>
+             </div>
+             <div class="clFl sLegendary sForgeWorld mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <img class="tooltip logo2" src="/aos3/img/expansions/FWL_Aos_logo2.png" title="Expansion. Warhammer Legends: Monstrous Arcanum (3rd edition)"/>
+              <a class="contentColorInv" href="#Warpfire-Dragon">
+               Warpfire Dragon
+              </a>
+             </div>
+            </div>
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 F
+                </b>
+                action Terrain Feature
+               </span>
+              </div>
+              <div class="mw2 i30">
+               <span class="bl1">
+                ?
+               </span>
+               <a class="contentColorInv" href="#Fane-of-Slaanesh">
+                Fane of Slaanesh
+               </a>
+              </div>
+             </div>
+            </div>
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 E
+                </b>
+                ndless Spell
+               </span>
+              </div>
+              <div class="mw2 i30">
+               <span class="bl1">
+                ?
+               </span>
+               <a class="contentColorInv" href="#Dreadful-Visage">
+                Dreadful Visage
+               </a>
+              </div>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Mesmerising-Mirror">
+               Mesmerising Mirror
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Wheels-of-Excruciation">
+               Wheels of Excruciation
+              </a>
+             </div>
+            </div>
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 W
+                </b>
+                arscroll Battalion
+               </span>
+              </div>
+              <div class="mw2 i30">
+               <span class="bl1">
+                ?
+               </span>
+               <a class="contentColorInv" href="#Supreme-Sybarites">
+                Supreme Sybarites
+               </a>
+              </div>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Epicurean-Revellers">
+               Epicurean Revellers
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Seeker-Cavalcade">
+               Seeker Cavalcade
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Depraved-Carnival">
+               Depraved Carnival
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Nobles-of-Excess">
+               Nobles of Excess
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <a class="contentColorInv" href="#Exalted-Speed-Knights">
+               Exalted Speed-Knights
+              </a>
+             </div>
+             <div class="mw2 i30">
+              <span class="bl1">
+               ?
+              </span>
+              <img class="tooltip logo2" src="/aos3/img/expansions/BR_logo2.png" title="Expansion. Broken Realms: Kragnos (2nd edition, version 1.0)"/>
+              <a class="contentColorInv" href="#The-Exquisite-Pursuit">
+               The Exquisite Pursuit
+              </a>
+             </div>
+            </div>
+            <div style="clear:both; margin-bottom:8px;">
+             <div class="BreakInsideAvoid">
+              <div class="mw2 i10">
+               <span class="contentColorInv">
+                <b style="color:#f61f09">
+                 R
+                </b>
+                egiment of Renown
+               </span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </span>
+         </td>
+         <td background="/aos3/img/corners/Corner3_4.png" style="width:20px">
+         </td>
+        </tr>
+        <tr>
+         <td background="/aos3/img/corners/Corner3_7.png" style="width:20px;height:20px">
+         </td>
+         <td background="/aos3/img/corners/Corner3_6.png" style="height:20px">
+         </td>
+         <td background="/aos3/img/corners/Corner3_5.png" style="width:20px;height:20px">
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <br/>
+    <a name="Leader-Behemoth">
+    </a>
+    <h2>
+     Leader, Behemoth
+    </h2>
+    <div>
+     <br/>
+    </div>
+    <div class="datasheet pagebreak" style="position:relative">
+     <a name="Glutos-Orscollion-Lord-of-Gluttony">
+     </a>
+     <div class="AoS_profile">
+      <div class="wsMoveCt wsMoveSmallFontSize">
+       <img src="/aos3/img/asterix.png"/>
+      </div>
+      <div class="wsWounds">
+       18
+      </div>
+      <div class="wsSave">
+       3+
+      </div>
+      <div class="wsBravery">
+       9
+      </div>
+     </div>
+     <div>
+      <div class="nails-header">
+       <span class="nails">
+       </span>
+       WARSCROLL
+       <span class="nails">
+       </span>
+      </div>
+      <h3 class="wsHeader">
+       <div>
+        Glutos Orscollion, Lord of Gluttony
+        <a href="https://www.google.com/search?tbm=isch&amp;q=Age%20of%20Sigmar%20Hedonites%20of%20Slaanesh%20Glutos%20Orscollion,%20Lord%20of%20Gluttony%20miniature" target="_blank">
+         <div class="tooltip picSearch" title="Search for model?s image on the Internet">
+         </div>
+        </a>
+       </div>
+      </h3>
+     </div>
+     <div class="ShowFluff wsLegend">
+      Guided by the daemon Loth?shar, Glutos Orscollion is on a quest to sample the most exotic tastes in the Mortal Realms. Riding atop an opulent palanquin and surrounded by his devoted court, he can unmake whole armies through his loathsome magics.
+     </div>
+     <div class="wsTable">
+      <table border="1" cellpadding="2" cellspacing="0" style="border-collapse:collapse;border-width:0px">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsHeaderCellName wsHeaderCellName_RangedWeapons">
+          <span class="wsHeaderCellName_short">
+           MISSILE WEAPONS
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Range
+         </td>
+         <td class="wsHeaderCell">
+          Attacks
+         </td>
+         <td class="wsHeaderCell">
+          To Hit
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           To Wound
+          </span>
+          <span class="wsHeaderCell_short">
+           To Wnd
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Rend
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           Damage
+          </span>
+          <span class="wsHeaderCell_short">
+           Dmg
+          </span>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Leerstave of Loth?shar
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Leerstave of Loth?shar
+         </td>
+         <td class="wsDataCell">
+          12"
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+         <td class="wsDataCell">
+          2+
+         </td>
+         <td class="wsDataCell">
+          2+
+         </td>
+         <td class="wsDataCell">
+          -
+         </td>
+         <td class="wsDataCell">
+          6
+         </td>
+        </tr>
+        <tr class="wsHeaderRow">
+         <td class="wsHeaderCellName wsHeaderCellName_MeleeWeapons">
+          <span class="wsHeaderCellName_short">
+           MELEE WEAPONS
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Range
+         </td>
+         <td class="wsHeaderCell">
+          Attacks
+         </td>
+         <td class="wsHeaderCell">
+          To Hit
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           To Wound
+          </span>
+          <span class="wsHeaderCell_short">
+           To Wnd
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Rend
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           Damage
+          </span>
+          <span class="wsHeaderCell_short">
+           Dmg
+          </span>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Wailing Greatblade
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Wailing Greatblade
+         </td>
+         <td class="wsDataCell">
+          1"
+         </td>
+         <td class="wsDataCell">
+          3
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -2
+         </td>
+         <td class="wsDataCell">
+          2
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Flaying Scourge
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Flaying Scourge
+         </td>
+         <td class="wsDataCell">
+          2"
+         </td>
+         <td class="wsDataCell">
+          3
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          4+
+         </td>
+         <td class="wsDataCell">
+          -
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Sacrificial Dagger
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Sacrificial Dagger
+         </td>
+         <td class="wsDataCell">
+          1"
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          4+
+         </td>
+         <td class="wsDataCell">
+          -
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Crushing Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow wsLastDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsLastDataCell wsDataCell_long">
+          Crushing Claws
+         </td>
+         <td class="wsLastDataCell">
+          2"
+         </td>
+         <td class="wsLastDataCell">
+          <img class="ast" src="/aos3/img/asterix.png"/>
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          -2
+         </td>
+         <td class="wsLastDataCell">
+          3
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div class="wsTable">
+      <div class="wsDamageHeader">
+       DAMAGE TABLE
+      </div>
+      <table border="1" cellpadding="2" cellspacing="0" class="wsDamageTable">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsDamageWidth wsHeaderCell">
+          Wounds Suffered
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Move
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Crushing Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          0-8
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          8"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          5
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          9-11
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          6"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          4
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          12-14
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          5"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          3
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsLastDataCell">
+          15+
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          4"
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          2
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div style="clear:both">
+     </div>
+     <div class="Columns3_NoRule">
+      <div class="BreakInsideAvoid PitchedBattleProfile ShowPitchedBattleProfile">
+       <div class="wsAbilityHeader">
+        PITCHED BATTLE PROFILE
+       </div>
+       <a href="/aos3/the-rules/the-core-rules/#Pitched-Battle-Profiles">
+        <div class="tooltip_link_inline">
+        </div>
+       </a>
+       <br/>
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         Unit Size
+        </span>
+        <b>
+         :
+        </b>
+        1
+        <span class="redfont">
+         Points
+        </span>
+        <b>
+         :
+        </b>
+        480
+        <br/>
+        <span class="redfont">
+         Battlefield Role
+        </span>
+        <b>
+         :
+        </b>
+        Leader, Behemoth
+        <br/>
+        <span class="ShowBaseSize">
+         <span class="redfont">
+          Base size
+         </span>
+         <b>
+          :
+         </b>
+         170 x 105mm
+        </span>
+        <br class="ShowBaseSize"/>
+        <span class="redfont">
+         Notes
+        </span>
+        <b>
+         :
+        </b>
+        Single, Unique
+       </div>
+      </div>
+      <div class="ShowPitchedBattleProfile">
+       <br/>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="BreakInsideAvoid">
+        <b>
+         <i>
+          Glutos Orscollion. Lord of Gluttony, is armed with the Leerstave of Loth?shar.
+         </i>
+        </b>
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         BATTALIONS
+        </span>
+        <b>
+         :
+        </b>
+        This warscroll can be used in the following warscroll battalions:
+        <br/>
+        ?
+        <a href="/aos3/factions/hedonites-of-slaanesh/warscrolls.html#Supreme-Sybarites">
+         Supreme Sybarites
+        </a>
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        WIZARD
+       </span>
+       <b>
+        :
+       </b>
+       This unit can attempt to cast 2 spells in your hero phase and attempt to unbind 2 spells in the enemy hero phase.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        MOUNT
+       </span>
+       <b>
+        :
+       </b>
+       This unit?s palanquin is drawn by palanquin bearers armed with Crushing Claws.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        CREW
+       </span>
+       <b>
+        :
+       </b>
+       This unit?s palanquin has a crew armed with a Wailing Greatblade, Flaying Scourge and Sacrificial Dagger.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Blessings of the Dark Prince
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Glutos? priestess Dolece graces her master with Slaanesh?s divine protection.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       This unit has a ward of 5+.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Fog of Temptation
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Those who inhale the scented mist emanating from Glutos? palanquin are wracked with agonising hunger spasms.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Subtract 1 from hit rolls for attacks made by enemy units within 12" of this unit.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <span class="redfont">
+       The Grand Gourmand
+      </span>
+      <b>
+       :
+      </b>
+      <span class="ShowFluff legend4">
+       Glutos sees battle as a grand banquet in which his darkest appetites may be given free rein.
+       <br/>
+       <div class="spc">
+       </div>
+      </span>
+      This unit gains an ability each battle round, as shown below. These abilities are cumulative.
+      <br/>
+      <br/>
+      <i>
+       <b>
+        Battle Round 1 - Aperitif:
+       </b>
+      </i>
+      Add 1 to the Bravery characteristic of friendly
+      <span class="tooltip00001" data-tooltip-anchor="#tooltip_content00001" data-tooltip-content="#tooltip_content00001">
+       <span class="kwb kwbu">
+        HEDONITES
+       </span>
+       <span class="kwb2 kwbu">
+        OF
+       </span>
+       <span class="kwb kwbu">
+        SLAANESH
+       </span>
+       <span class="kwb kwbu">
+        MORTAL
+       </span>
+      </span>
+      units while they are wholly within 12" of this unit.
+      <br/>
+      <br/>
+      <i>
+       <b>
+        Battle Round 2 - Starter:
+       </b>
+      </i>
+      This unit can
+      <span class="tooltip00002" data-tooltip-content="#tooltip_content00002">
+       <span class="tt kwbu">
+        run
+       </span>
+      </span>
+      and still
+      <a href="/aos3/the-rules/the-core-rules/#Charge-Phase">
+       charge
+      </a>
+      later in the turn.
+      <br/>
+      <br/>
+      <i>
+       <b>
+        Battle Round 3 - Main Course:
+       </b>
+      </i>
+      Do not take
+      <span class="tooltip00003" data-tooltip-content="#tooltip_content00003">
+       <span class="tt kwbu">
+        battleshock
+       </span>
+       <span class="tt kwbu">
+        tests
+       </span>
+      </span>
+      for friendly
+      <span class="kwb">
+       HEDONITES
+      </span>
+      <span class="kwb2">
+       OF
+      </span>
+      <span class="kwb">
+       SLAANESH
+      </span>
+      <span class="kwb">
+       MORTAL
+      </span>
+      units while they are wholly within 12" of this unit.
+      <br/>
+      <br/>
+      <i>
+       <b>
+        Battle Round 4 - Dessert:
+       </b>
+      </i>
+      This unit can attempt to
+      <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+       <span class="tt kwbu">
+        cast
+       </span>
+      </span>
+      1 extra
+      <a href="/aos3/the-rules/the-core-rules/#Spell-Lores">
+       spell
+      </a>
+      in your
+      <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+       hero phase
+      </a>
+      and attempt to
+      <span class="tooltip00005" data-tooltip-content="#tooltip_content00005">
+       <span class="tt kwbu">
+        unbind
+       </span>
+      </span>
+      1 extra spell in the enemy hero phase.
+      <br/>
+      <br/>
+      <i>
+       <b>
+        Battle Round 5 - Digestif:
+       </b>
+      </i>
+      You can re roll
+      <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+       <span class="tt kwbu">
+        casting
+       </span>
+      </span>
+      ,
+      <span class="tooltip00006" data-tooltip-content="#tooltip_content00006">
+       <span class="tt kwbu">
+        dispelling
+       </span>
+      </span>
+      and
+      <span class="tooltip00005" data-tooltip-content="#tooltip_content00005">
+       <span class="tt kwbu">
+        unbinding
+       </span>
+       <span class="tt kwbu">
+        rolls
+       </span>
+      </span>
+      for this unit.
+      <div>
+       <br/>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Gorge on Excess
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        The followers of the Gluttonous Host grow strong on acts of excess, be it gulping down raw flesh or engaging in some other depraved perversion in the heat of battle.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       At the start of your
+       <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+        hero phase
+       </a>
+       , you can pick 1 friendly
+       <span class="tooltip00001" data-tooltip-anchor="#tooltip_content00001" data-tooltip-content="#tooltip_content00001">
+        <span class="kwb kwbu">
+         HEDONITES
+        </span>
+        <span class="kwb2 kwbu">
+         OF
+        </span>
+        <span class="kwb kwbu">
+         SLAANESH
+        </span>
+        <span class="kwb kwbu">
+         MORTAL
+        </span>
+       </span>
+       unit wholly within 12" of this unit. If you do so, until your next hero phase, each time that unit fights, after all of its attacks have been resolved, you can
+       <span class="tooltip00007" data-tooltip-content="#tooltip_content00007">
+        <span class="tt kwbu">
+         heal
+        </span>
+       </span>
+       up to a number of wounds allocated to that unit equal to the number of wounds and
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wounds
+        </span>
+       </span>
+       caused by those attacks that were allocated to enemy units (up to a maximum of 6).
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Crippling Famishment
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        With a snap of his fingers, Glutos paralyses his prey with a violent surge of immeasurable hunger.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Crippling Famishment is a spell that has a
+       <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+        <span class="tt kwbu">
+         casting
+        </span>
+        <span class="tt kwbu">
+         value
+        </span>
+       </span>
+       of 7 and a range of 18". If successfully cast, pick 1 enemy unit within range and visible to the caster. Until your next
+       <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+        hero phase
+       </a>
+       , halve the Move characteristic of that unit, and halve
+       <span class="tooltip00002" data-tooltip-content="#tooltip_content00002">
+        <span class="tt kwbu">
+         run
+        </span>
+        <span class="tt kwbu">
+         rolls
+        </span>
+       </span>
+       and
+       <span class="tooltip00009" data-tooltip-content="#tooltip_content00009">
+        <span class="tt kwbu">
+         charge
+        </span>
+        <span class="tt kwbu">
+         rolls
+        </span>
+       </span>
+       for that unit.
+      </div>
+     </div>
+     <div style="clear:both">
+      <br/>
+     </div>
+     <table border="0" cellpadding="8" cellspacing="0" width="100%">
+      <tbody>
+       <tr>
+        <td class="wsKeywordHeader">
+         <div style="font-weight:700; font-family:'Minion-Pro',serif;">
+          KEYWORDS
+         </div>
+        </td>
+        <td class="wsKeywordLine">
+         <div style="font-weight:bold">
+          <span class="tooltipCHAOS" data-tooltip-anchor="#tooltip_contentCHAOS" data-tooltip-content="#tooltip_contentCHAOS">
+           <span class="kwb kwbu">
+            CHAOS
+           </span>
+          </span>
+          ,
+          <span class="tooltipHEDONITESOFSLAANESH" data-tooltip-anchor="#tooltip_contentHEDONITESOFSLAANESH" data-tooltip-content="#tooltip_contentHEDONITESOFSLAANESH">
+           <span class="kwb kwbu">
+            HEDONITES
+           </span>
+           <span class="kwb2 kwbu">
+            OF
+           </span>
+           <span class="kwb kwbu">
+            SLAANESH
+           </span>
+          </span>
+          ,
+          <span class="tooltipMORTAL" data-tooltip-anchor="#tooltip_contentMORTAL" data-tooltip-content="#tooltip_contentMORTAL">
+           <span class="kwb kwbu">
+            MORTAL
+           </span>
+          </span>
+          ,
+          <span class="tooltipSLAANESH" data-tooltip-anchor="#tooltip_contentSLAANESH" data-tooltip-content="#tooltip_contentSLAANESH">
+           <span class="kwb kwbu">
+            SLAANESH
+           </span>
+          </span>
+          ,
+          <span class="tooltipHERO" data-tooltip-anchor="#tooltip_contentHERO" data-tooltip-content="#tooltip_contentHERO">
+           <span class="kwb kwbu">
+            HERO
+           </span>
+          </span>
+          ,
+          <span class="tooltipWIZARD" data-tooltip-anchor="#tooltip_contentWIZARD" data-tooltip-content="#tooltip_contentWIZARD">
+           <span class="kwb kwbu">
+            WIZARD
+           </span>
+          </span>
+          ,
+          <span class="kwb">
+           GLUTOS
+          </span>
+          <span class="kwb">
+           ORSCOLLION
+          </span>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div style="clear:both">
+    </div>
+    <div>
+     <br/>
+     <br/>
+    </div>
+    <div class="datasheet pagebreak" style="position:relative">
+     <a name="Keeper-of-Secrets">
+     </a>
+     <div class="AoS_profile">
+      <div class="wsMoveCt wsMoveSmallFontSize">
+       <img src="/aos3/img/asterix.png"/>
+      </div>
+      <div class="wsWounds">
+       16
+      </div>
+      <div class="wsSave">
+       4+
+      </div>
+      <div class="wsBravery">
+       10
+      </div>
+     </div>
+     <div>
+      <div class="nails-header">
+       <span class="nails">
+       </span>
+       WARSCROLL
+       <span class="nails">
+       </span>
+      </div>
+      <h3 class="wsHeader">
+       <div>
+        Keeper of Secrets
+        <a href="https://www.google.com/search?tbm=isch&amp;q=Age%20of%20Sigmar%20Hedonites%20of%20Slaanesh%20Keeper%20of%20Secrets%20miniature" target="_blank">
+         <div class="tooltip picSearch" title="Search for model?s image on the Internet">
+         </div>
+        </a>
+       </div>
+      </h3>
+     </div>
+     <div class="ShowFluff wsLegend">
+      A Keeper of Secrets is a greater daemon of Slaanesh, a consummate warrior and spellmaster of the Dark Prince?s hosts. Its four powerful arms move languidly as it slinks forwards, only to explode into lethal motion when its prey is in reach.
+     </div>
+     <div class="wsTable">
+      <table border="1" cellpadding="2" cellspacing="0" style="border-collapse:collapse;border-width:0px">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsHeaderCellName wsHeaderCellName_RangedWeapons">
+          <span class="wsHeaderCellName_short">
+           MISSILE WEAPONS
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Range
+         </td>
+         <td class="wsHeaderCell">
+          Attacks
+         </td>
+         <td class="wsHeaderCell">
+          To Hit
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           To Wound
+          </span>
+          <span class="wsHeaderCell_short">
+           To Wnd
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Rend
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           Damage
+          </span>
+          <span class="wsHeaderCell_short">
+           Dmg
+          </span>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Living Whip
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Living Whip
+         </td>
+         <td class="wsDataCell">
+          6"
+         </td>
+         <td class="wsDataCell">
+          D6
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -1
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+        </tr>
+        <tr class="wsHeaderRow">
+         <td class="wsHeaderCellName wsHeaderCellName_MeleeWeapons">
+          <span class="wsHeaderCellName_short">
+           MELEE WEAPONS
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Range
+         </td>
+         <td class="wsHeaderCell">
+          Attacks
+         </td>
+         <td class="wsHeaderCell">
+          To Hit
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           To Wound
+          </span>
+          <span class="wsHeaderCell_short">
+           To Wnd
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Rend
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           Damage
+          </span>
+          <span class="wsHeaderCell_short">
+           Dmg
+          </span>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Ritual Knife or Sinistrous Hand
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Ritual Knife or Sinistrous Hand
+         </td>
+         <td class="wsDataCell">
+          1"
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+         <td class="wsDataCell">
+          2+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -1
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Elegant Greatblade
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Elegant Greatblade
+         </td>
+         <td class="wsDataCell">
+          2"
+         </td>
+         <td class="wsDataCell">
+          4
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -1
+         </td>
+         <td class="wsDataCell">
+          2
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Impaling Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow wsLastDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsLastDataCell wsDataCell_long">
+          Impaling Claws
+         </td>
+         <td class="wsLastDataCell">
+          3"
+         </td>
+         <td class="wsLastDataCell">
+          2
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          -2
+         </td>
+         <td class="wsLastDataCell">
+          <img class="ast" src="/aos3/img/asterix.png"/>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div class="wsTable">
+      <div class="wsDamageHeader">
+       DAMAGE TABLE
+      </div>
+      <table border="1" cellpadding="2" cellspacing="0" class="wsDamageTable">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsDamageWidth wsHeaderCell">
+          Wounds Suffered
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Move
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Impaling Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          0-8
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          14"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          5
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          9-10
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          12"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          4
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          11-12
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          10"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          3
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsLastDataCell">
+          13+
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          8"
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          2
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div style="clear:both">
+     </div>
+     <div class="Columns3_NoRule">
+      <div class="BreakInsideAvoid PitchedBattleProfile ShowPitchedBattleProfile">
+       <div class="wsAbilityHeader">
+        PITCHED BATTLE PROFILE
+       </div>
+       <a href="/aos3/the-rules/the-core-rules/#Pitched-Battle-Profiles">
+        <div class="tooltip_link_inline">
+        </div>
+       </a>
+       <br/>
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         Unit Size
+        </span>
+        <b>
+         :
+        </b>
+        1
+        <span class="redfont">
+         Points
+        </span>
+        <b>
+         :
+        </b>
+        400
+        <br/>
+        <span class="redfont">
+         Battlefield Role
+        </span>
+        <b>
+         :
+        </b>
+        Leader, Behemoth
+        <br/>
+        <span class="ShowBaseSize">
+         <span class="redfont">
+          Base size
+         </span>
+         <b>
+          :
+         </b>
+         100mm
+        </span>
+        <br class="ShowBaseSize"/>
+        <span class="redfont">
+         Notes
+        </span>
+        <b>
+         :
+        </b>
+        Single
+       </div>
+      </div>
+      <div class="ShowPitchedBattleProfile">
+       <br/>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="BreakInsideAvoid">
+        <b>
+         <i>
+          A Keeper of Secrets is armed with an Elegant Greatblade, Impaling Claws and 1 of the following weapon options: Living Whip; Ritual Knife; Sinistrous Hand; or Shining Aegis.
+         </i>
+        </b>
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         BATTALIONS
+        </span>
+        <b>
+         :
+        </b>
+        This warscroll can be used in the following warscroll battalions:
+        <br/>
+        ?
+        <a href="/aos3/factions/hedonites-of-slaanesh/warscrolls.html#Supreme-Sybarites">
+         Supreme Sybarites
+        </a>
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        WIZARD
+       </span>
+       <b>
+        :
+       </b>
+       This unit can attempt to
+       <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+        <span class="tt kwbu">
+         cast
+        </span>
+       </span>
+       2
+       <a href="/aos3/the-rules/the-core-rules/#Spells">
+        spells
+       </a>
+       in your
+       <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+        hero phase
+       </a>
+       and attempt to
+       <span class="tooltip00005" data-tooltip-content="#tooltip_content00005">
+        <span class="tt kwbu">
+         unbind
+        </span>
+       </span>
+       2 spells in the enemy hero phase.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Excess of Violence
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        With the subtlest of gestures, a Keeper of Secrets can rouse its followers to attack with redoubled aggression.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Once per battle, in the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , if any friendly units with this ability are on the battlefield, you can pick 1 different friendly
+       <span class="tooltipHEDONITESOFSLAANESH" data-tooltip-anchor="#tooltip_contentHEDONITESOFSLAANESH" data-tooltip-content="#tooltip_contentHEDONITESOFSLAANESH">
+        <span class="kwb kwbu">
+         HEDONITES
+        </span>
+        <span class="kwb2 kwbu">
+         OF
+        </span>
+        <span class="kwb kwbu">
+         SLAANESH
+        </span>
+       </span>
+       unit that is wholly within 12" of a friendly unit with this ability and that has fought for the first time in that phase. That unit can fight for a second time in that phase. The
+       <a href="/aos3/the-rules/the-core-rules/#Strike-first-and-Strike-last-Effects">
+        strike-last effect
+       </a>
+       applies to that unit when it fights for that second time.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Living Whip
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        A living whip can be used to entangle an enemy?s weapons.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If this unit is armed with a Living Whip, at the start of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , you can pick 1 enemy unit within 6" of this unit and roll a dice. On a 2+, subtract 1 from the Attacks characteristic of that unit?s melee weapons (to a minimum of 1) until the end of that phase. The same unit cannot be affected by this ability more than once per phase.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Ritual Knife
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        The Keeper of Secrets dispatches a badly wounded victim with a final dagger thrust.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If this unit is armed with a Ritual Knife, at the end of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , you can pick 1 enemy model within 1" of this unit that has any wounds allocated to it and roll a dice. On a 2+, that model?s unit suffers a number of
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wounds
+        </span>
+       </span>
+       equal to the roll.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Sinistrous Hand
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Reaching out with bladed talons, the Keeper of Secrets rips the heart from its dying victim?s chest and consumes the still-beating organ.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If this unit is armed with a Sinistrous Hand, at the end of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , if any enemy models were slain by wounds caused by this unit?s attacks in that phase, you can
+       <span class="tooltip00007" data-tooltip-content="#tooltip_content00007">
+        <span class="tt kwbu">
+         heal
+        </span>
+       </span>
+       up to 3 wounds allocated to this unit. If any enemy
+       <span class="kwb">
+        HEROES
+       </span>
+       were slain by wounds caused by this unit?s attacks in that phase, you can heal up to 6 wounds allocated to this unit instead.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Shining Aegis
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        This masterfully created shield can turn aside blows and magical spells.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If this unit is armed with a Shining Aegis, it has a
+       <span class="tooltip00016" data-tooltip-content="#tooltip_content00016">
+        <span class="tt kwbu">
+         ward
+        </span>
+       </span>
+       of 5+.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Delicate Precision
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        A Keeper of Secrets attacks its foes with a dazzling array of exquisitely measured blows.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If the unmodified
+       <span class="tooltip00017" data-tooltip-content="#tooltip_content00017">
+        <span class="tt kwbu">
+         wound
+        </span>
+        <span class="tt kwbu">
+         roll
+        </span>
+       </span>
+       for an attack made by this unit is 6, that attack causes a number of
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wounds
+        </span>
+       </span>
+       to the target equal to the weapon?s Damage characteristic and the
+       <a href="/aos3/the-rules/the-core-rules/#Attack-Sequence">
+        attack sequence
+       </a>
+       ends (do not make a
+       <span class="tooltip00018" data-tooltip-content="#tooltip_content00018">
+        <span class="tt kwbu">
+         save
+        </span>
+        <span class="tt kwbu">
+         roll
+        </span>
+       </span>
+       ).
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Dark Temptations
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Few can resist the temptations whispered by a Keeper of Secrets.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Once per turn, at the start of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , if any friendly units with this ability are on the battlefield, you can pick 1 enemy unit within 3" of a friendly unit with this ability. If you do so, your opponent must choose whether that unit resists or gives in to temptation. If it resists, that unit suffers D3
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wounds
+        </span>
+       </span>
+       . If it gives in, you gain D3
+       <a href="/aos3/factions/hedonites-of-slaanesh/#Euphoric-Killers">
+        depravity points
+       </a>
+       .
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Cacophonic Choir
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        The Keeper of Secrets unleashes a sanity-shattering chorus of magical sound.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Cacophonic Choir is a spell that has a
+       <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+        <span class="tt kwbu">
+         casting
+        </span>
+        <span class="tt kwbu">
+         value
+        </span>
+       </span>
+       of 6 and a range of 6". If successfully cast, roll 2D6. Each enemy unit within range that has a Bravery characteristic of less than the roll suffers D3
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wounds
+        </span>
+       </span>
+       (roll separately for each unit).
+      </div>
+     </div>
+     <div style="clear:both">
+      <br/>
+     </div>
+     <table border="0" cellpadding="8" cellspacing="0" width="100%">
+      <tbody>
+       <tr>
+        <td class="wsKeywordHeader">
+         <div style="font-weight:700; font-family:'Minion-Pro',serif;">
+          KEYWORDS
+         </div>
+        </td>
+        <td class="wsKeywordLine">
+         <div style="font-weight:bold">
+          <span class="tooltipCHAOS" data-tooltip-anchor="#tooltip_contentCHAOS" data-tooltip-content="#tooltip_contentCHAOS">
+           <span class="kwb kwbu">
+            CHAOS
+           </span>
+          </span>
+          ,
+          <span class="tooltipHEDONITESOFSLAANESH" data-tooltip-anchor="#tooltip_contentHEDONITESOFSLAANESH" data-tooltip-content="#tooltip_contentHEDONITESOFSLAANESH">
+           <span class="kwb kwbu">
+            HEDONITES
+           </span>
+           <span class="kwb2 kwbu">
+            OF
+           </span>
+           <span class="kwb kwbu">
+            SLAANESH
+           </span>
+          </span>
+          ,
+          <span class="tooltipDAEMON" data-tooltip-anchor="#tooltip_contentDAEMON" data-tooltip-content="#tooltip_contentDAEMON">
+           <span class="kwb kwbu">
+            DAEMON
+           </span>
+          </span>
+          ,
+          <span class="tooltipSLAANESH" data-tooltip-anchor="#tooltip_contentSLAANESH" data-tooltip-content="#tooltip_contentSLAANESH">
+           <span class="kwb kwbu">
+            SLAANESH
+           </span>
+          </span>
+          ,
+          <span class="tooltipHERO" data-tooltip-anchor="#tooltip_contentHERO" data-tooltip-content="#tooltip_contentHERO">
+           <span class="kwb kwbu">
+            HERO
+           </span>
+          </span>
+          ,
+          <span class="tooltipMONSTER" data-tooltip-anchor="#tooltip_contentMONSTER" data-tooltip-content="#tooltip_contentMONSTER">
+           <span class="kwb kwbu">
+            MONSTER
+           </span>
+          </span>
+          ,
+          <span class="tooltipWIZARD" data-tooltip-anchor="#tooltip_contentWIZARD" data-tooltip-content="#tooltip_contentWIZARD">
+           <span class="kwb kwbu">
+            WIZARD
+           </span>
+          </span>
+          ,
+          <span class="tooltipKEEPEROFSECRETS" data-tooltip-anchor="#tooltip_contentKEEPEROFSECRETS" data-tooltip-content="#tooltip_contentKEEPEROFSECRETS">
+           <span class="kwb kwbu">
+            KEEPER
+           </span>
+           <span class="kwb2 kwbu">
+            OF
+           </span>
+           <span class="kwb kwbu">
+            SECRETS
+           </span>
+          </span>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div style="clear:both">
+    </div>
+    <span class="ezoic-videopicker-video" id="ezoic-pub-video-placeholder-2">
+    </span>
+    <div>
+     <br/>
+     <br/>
+    </div>
+    <div class="datasheet pagebreak" style="position:relative">
+     <a name="Shalaxi-Helbane">
+     </a>
+     <div class="AoS_profile">
+      <div class="wsMoveCt wsMoveSmallFontSize">
+       <img src="/aos3/img/asterix.png"/>
+      </div>
+      <div class="wsWounds">
+       16
+      </div>
+      <div class="wsSave">
+       4+
+      </div>
+      <div class="wsBravery">
+       10
+      </div>
+     </div>
+     <div>
+      <div class="nails-header">
+       <span class="nails">
+       </span>
+       WARSCROLL
+       <span class="nails">
+       </span>
+      </div>
+      <h3 class="wsHeader">
+       <div>
+        Shalaxi Helbane
+        <a href="https://www.google.com/search?tbm=isch&amp;q=Age%20of%20Sigmar%20Hedonites%20of%20Slaanesh%20Shalaxi%20Helbane%20miniature" target="_blank">
+         <div class="tooltip picSearch" title="Search for model?s image on the Internet">
+         </div>
+        </a>
+       </div>
+      </h3>
+     </div>
+     <div class="ShowFluff wsLegend">
+      Known as the Monarch of the Hunt, Shalaxi Helbane is Slaanesh?s weapon against the daemons of the other Chaos Gods. Able to discern the secrets of the Dark Prince?s foes through blended senses, this statuesque warrior has slain a thousand rivals and more.
+     </div>
+     <div class="wsTable">
+      <table border="1" cellpadding="2" cellspacing="0" style="border-collapse:collapse;border-width:0px">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsHeaderCellName wsHeaderCellName_RangedWeapons">
+          <span class="wsHeaderCellName_short">
+           MISSILE WEAPONS
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Range
+         </td>
+         <td class="wsHeaderCell">
+          Attacks
+         </td>
+         <td class="wsHeaderCell">
+          To Hit
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           To Wound
+          </span>
+          <span class="wsHeaderCell_short">
+           To Wnd
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Rend
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           Damage
+          </span>
+          <span class="wsHeaderCell_short">
+           Dmg
+          </span>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Living Whip
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Living Whip
+         </td>
+         <td class="wsDataCell">
+          6"
+         </td>
+         <td class="wsDataCell">
+          D6
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -1
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+        </tr>
+        <tr class="wsHeaderRow">
+         <td class="wsHeaderCellName wsHeaderCellName_MeleeWeapons">
+          <span class="wsHeaderCellName_short">
+           MELEE WEAPONS
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Range
+         </td>
+         <td class="wsHeaderCell">
+          Attacks
+         </td>
+         <td class="wsHeaderCell">
+          To Hit
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           To Wound
+          </span>
+          <span class="wsHeaderCell_short">
+           To Wnd
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Rend
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           Damage
+          </span>
+          <span class="wsHeaderCell_short">
+           Dmg
+          </span>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Soulpiercer
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Soulpiercer
+         </td>
+         <td class="wsDataCell">
+          3"
+         </td>
+         <td class="wsDataCell">
+          2
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          2+
+         </td>
+         <td class="wsDataCell">
+          -3
+         </td>
+         <td class="wsDataCell">
+          D3+3
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Impaling Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow wsLastDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsLastDataCell wsDataCell_long">
+          Impaling Claws
+         </td>
+         <td class="wsLastDataCell">
+          3"
+         </td>
+         <td class="wsLastDataCell">
+          2
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          -2
+         </td>
+         <td class="wsLastDataCell">
+          <img class="ast" src="/aos3/img/asterix.png"/>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div class="wsTable">
+      <div class="wsDamageHeader">
+       DAMAGE TABLE
+      </div>
+      <table border="1" cellpadding="2" cellspacing="0" class="wsDamageTable">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsDamageWidth wsHeaderCell">
+          Wounds Suffered
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Move
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Impaling Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          0-8
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          14"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          5
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          9-10
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          12"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          4
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          11-12
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          10"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          3
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsLastDataCell">
+          13+
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          8"
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          2
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div style="clear:both">
+     </div>
+     <div class="Columns3_NoRule">
+      <div class="BreakInsideAvoid PitchedBattleProfile ShowPitchedBattleProfile">
+       <div class="wsAbilityHeader">
+        PITCHED BATTLE PROFILE
+       </div>
+       <a href="/aos3/the-rules/the-core-rules/#Pitched-Battle-Profiles">
+        <div class="tooltip_link_inline">
+        </div>
+       </a>
+       <br/>
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         Unit Size
+        </span>
+        <b>
+         :
+        </b>
+        1
+        <span class="redfont">
+         Points
+        </span>
+        <b>
+         :
+        </b>
+        390
+        <br/>
+        <span class="redfont">
+         Battlefield Role
+        </span>
+        <b>
+         :
+        </b>
+        Leader, Behemoth
+        <br/>
+        <span class="ShowBaseSize">
+         <span class="redfont">
+          Base size
+         </span>
+         <b>
+          :
+         </b>
+         100mm
+        </span>
+        <br class="ShowBaseSize"/>
+        <span class="redfont">
+         Notes
+        </span>
+        <b>
+         :
+        </b>
+        Single, Unique
+       </div>
+      </div>
+      <div class="ShowPitchedBattleProfile">
+       <br/>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="BreakInsideAvoid">
+        <b>
+         <i>
+          Shalaxi Helbane is armed with Soulpiercer, Impaling Claws and 1 of the following weapon options: Living Whip; or Shining Aegis.
+         </i>
+        </b>
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         BATTALIONS
+        </span>
+        <b>
+         :
+        </b>
+        This warscroll can be used in the following warscroll battalions:
+        <br/>
+        ?
+        <a href="/aos3/factions/hedonites-of-slaanesh/warscrolls.html#Supreme-Sybarites">
+         Supreme Sybarites
+        </a>
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        WIZARD
+       </span>
+       <b>
+        :
+       </b>
+       This unit can attempt to
+       <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+        <span class="tt kwbu">
+         cast
+        </span>
+       </span>
+       2
+       <a href="/aos3/the-rules/the-core-rules/#Spells">
+        spells
+       </a>
+       in your
+       <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+        hero phase
+       </a>
+       and attempt to
+       <span class="tooltip00005" data-tooltip-content="#tooltip_content00005">
+        <span class="tt kwbu">
+         unbind
+        </span>
+       </span>
+       2 spells in the enemy hero phase.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Living Whip
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        A living whip can be used to entangle an enemy?s weapons.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If this unit is armed with a Living Whip, at the start of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , you can pick 1 enemy unit within 6" of this unit and roll a dice. On a 2+, subtract 1 from the Attacks characteristic of that unit?s melee weapons (to a minimum of 1) until the end of that phase. The same unit cannot be affected by this ability more than once per phase.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Shining Aegis
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        This masterfully created shield can turn aside blows and magical spells.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If this unit is armed with a Shining Aegis, it has a
+       <span class="tooltip00016" data-tooltip-content="#tooltip_content00016">
+        <span class="tt kwbu">
+         ward
+        </span>
+       </span>
+       of 5+.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Cloak of Constriction
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Shalaxi?s challengers find themselves ensnared by the tentacular pseudopods of the daemon?s cloak.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Subtract 1 from
+       <span class="tooltip00022" data-tooltip-content="#tooltip_content00022">
+        <span class="tt kwbu">
+         hit
+        </span>
+        <span class="tt kwbu">
+         rolls
+        </span>
+       </span>
+       and
+       <span class="tooltip00017" data-tooltip-content="#tooltip_content00017">
+        <span class="tt kwbu">
+         wound
+        </span>
+        <span class="tt kwbu">
+         rolls
+        </span>
+       </span>
+       for attacks made with melee weapons that target this unit.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Delicate Precision
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        A Keeper of Secrets attacks its foes with a dazzling array of exquisitely measured blows.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If the unmodified
+       <span class="tooltip00017" data-tooltip-content="#tooltip_content00017">
+        <span class="tt kwbu">
+         wound
+        </span>
+        <span class="tt kwbu">
+         roll
+        </span>
+       </span>
+       for an attack made by this unit is 6, that attack causes a number of
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wounds
+        </span>
+       </span>
+       to the target equal to the weapon?s Damage characteristic and the
+       <a href="/aos3/the-rules/the-core-rules/#Attack-Sequence">
+        attack sequence
+       </a>
+       ends (do not make a
+       <span class="tooltip00018" data-tooltip-content="#tooltip_content00018">
+        <span class="tt kwbu">
+         save
+        </span>
+        <span class="tt kwbu">
+         roll
+        </span>
+       </span>
+       ).
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Irresistible Challenge
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Few can resist the sorcerous challenge delivered by Shalaxi Helbane; those who do find their cowardice rewarded with crippling agony.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       At the start of the enemy
+       <a href="/aos3/the-rules/the-core-rules/#Charge-Phase">
+        charge phase
+       </a>
+       , you can pick 1 enemy
+       <span class="kwb">
+        HERO
+       </span>
+       within 12" of this unit and more than 3" from any other friendly units. If you do so, your opponent must choose whether that
+       <span class="kwb">
+        HERO
+       </span>
+       accepts or refuses Shalaxi?s challenge. If they refuse, that
+       <span class="kwb">
+        HERO
+       </span>
+       suffers D3
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wounds
+        </span>
+       </span>
+       . If they accept, that
+       <span class="kwb">
+        HERO
+       </span>
+       must attempt a charge and must finish the
+       <span class="tooltip00009" data-tooltip-content="#tooltip_content00009">
+        <span class="tt kwbu">
+         charge
+        </span>
+        <span class="tt kwbu">
+         move
+        </span>
+       </span>
+       within 1/2" of this unit. If they cannot finish the charge move within 1/2" of this unit, that
+       <span class="kwb">
+        HERO
+       </span>
+       suffers D3 mortal wounds instead.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        The Killing Stroke
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Shalaxi Helbane can outwit any foe, delivering a subtle scries of attacks and feints that sets them up for a final killing blow.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       At the start of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , you can pick 1 enemy
+       <span class="kwb">
+        HERO
+       </span>
+       within 3" of this unit. If you do so, all attacks made by this unit in that phase must target that
+       <span class="kwb">
+        HERO
+       </span>
+       , but the Damage characteristic of this unit?s Soulpiercer is 6 instead of D3+3 until the end of that phase.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Refine Senses
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        The sorcerer channels magical power into their senses so that nothing can be hidden from them and none can escape their wrath.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Refine Senses is a spell that has a
+       <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+        <span class="tt kwbu">
+         casting
+        </span>
+        <span class="tt kwbu">
+         value
+        </span>
+       </span>
+       of 4. If successfully cast, until your next
+       <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+        hero phase
+       </a>
+       , add 1 to
+       <span class="tooltip00022" data-tooltip-content="#tooltip_content00022">
+        <span class="tt kwbu">
+         hit
+        </span>
+        <span class="tt kwbu">
+         rolls
+        </span>
+       </span>
+       and
+       <span class="tooltip00017" data-tooltip-content="#tooltip_content00017">
+        <span class="tt kwbu">
+         wound
+        </span>
+        <span class="tt kwbu">
+         rolls
+        </span>
+       </span>
+       for attacks made by the caster that target an enemy
+       <span class="kwb">
+        HERO
+       </span>
+       and add 1 to
+       <span class="tooltip00018" data-tooltip-content="#tooltip_content00018">
+        <span class="tt kwbu">
+         save
+        </span>
+        <span class="tt kwbu">
+         rolls
+        </span>
+       </span>
+       for attacks made by enemy
+       <span class="kwb">
+        HEROES
+       </span>
+       that target the caster.
+      </div>
+     </div>
+     <div style="clear:both">
+      <br/>
+     </div>
+     <table border="0" cellpadding="8" cellspacing="0" width="100%">
+      <tbody>
+       <tr>
+        <td class="wsKeywordHeader">
+         <div style="font-weight:700; font-family:'Minion-Pro',serif;">
+          KEYWORDS
+         </div>
+        </td>
+        <td class="wsKeywordLine">
+         <div style="font-weight:bold">
+          <span class="tooltipCHAOS" data-tooltip-anchor="#tooltip_contentCHAOS" data-tooltip-content="#tooltip_contentCHAOS">
+           <span class="kwb kwbu">
+            CHAOS
+           </span>
+          </span>
+          ,
+          <span class="tooltipHEDONITESOFSLAANESH" data-tooltip-anchor="#tooltip_contentHEDONITESOFSLAANESH" data-tooltip-content="#tooltip_contentHEDONITESOFSLAANESH">
+           <span class="kwb kwbu">
+            HEDONITES
+           </span>
+           <span class="kwb2 kwbu">
+            OF
+           </span>
+           <span class="kwb kwbu">
+            SLAANESH
+           </span>
+          </span>
+          ,
+          <span class="tooltipDAEMON" data-tooltip-anchor="#tooltip_contentDAEMON" data-tooltip-content="#tooltip_contentDAEMON">
+           <span class="kwb kwbu">
+            DAEMON
+           </span>
+          </span>
+          ,
+          <span class="tooltipSLAANESH" data-tooltip-anchor="#tooltip_contentSLAANESH" data-tooltip-content="#tooltip_contentSLAANESH">
+           <span class="kwb kwbu">
+            SLAANESH
+           </span>
+          </span>
+          ,
+          <span class="tooltipHERO" data-tooltip-anchor="#tooltip_contentHERO" data-tooltip-content="#tooltip_contentHERO">
+           <span class="kwb kwbu">
+            HERO
+           </span>
+          </span>
+          ,
+          <span class="tooltipMONSTER" data-tooltip-anchor="#tooltip_contentMONSTER" data-tooltip-content="#tooltip_contentMONSTER">
+           <span class="kwb kwbu">
+            MONSTER
+           </span>
+          </span>
+          ,
+          <span class="tooltipWIZARD" data-tooltip-anchor="#tooltip_contentWIZARD" data-tooltip-content="#tooltip_contentWIZARD">
+           <span class="kwb kwbu">
+            WIZARD
+           </span>
+          </span>
+          ,
+          <span class="tooltipKEEPEROFSECRETS" data-tooltip-anchor="#tooltip_contentKEEPEROFSECRETS" data-tooltip-content="#tooltip_contentKEEPEROFSECRETS">
+           <span class="kwb kwbu">
+            KEEPER
+           </span>
+           <span class="kwb2 kwbu">
+            OF
+           </span>
+           <span class="kwb kwbu">
+            SECRETS
+           </span>
+          </span>
+          ,
+          <span class="kwb">
+           SHALAXI
+          </span>
+          <span class="kwb">
+           HELBANE
+          </span>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div style="clear:both">
+    </div>
+    <div>
+     <br/>
+     <br/>
+    </div>
+    <div class="datasheet pagebreak" style="position:relative">
+     <a name="Archaon-the-Everchosen">
+     </a>
+     <div class="AoS_profile">
+      <div class="wsMoveCt wsMoveSmallFontSize">
+       <img src="/aos3/img/asterix.png"/>
+      </div>
+      <div class="wsWounds">
+       25
+      </div>
+      <div class="wsSave">
+       3+
+      </div>
+      <div class="wsBravery">
+       10
+      </div>
+     </div>
+     <div>
+      <div class="nails-header">
+       <span class="nails">
+       </span>
+       WARSCROLL
+       <span class="nails">
+       </span>
+      </div>
+      <img class="tooltip logo3" src="/aos3/img/expansions/StD_logo3.png" title="Battletome. Slaves to Darkness (3rd edition, version 1.5)"/>
+      <h3 class="wsHeader">
+       <div>
+        Archaon the Everchosen
+        <a href="https://www.google.com/search?tbm=isch&amp;q=Age%20of%20Sigmar%20Hedonites%20of%20Slaanesh%20Archaon%20the%20Everchosen%20miniature" target="_blank">
+         <div class="tooltip picSearch" title="Search for model?s image on the Internet">
+         </div>
+        </a>
+       </div>
+      </h3>
+     </div>
+     <div class="ShowFluff wsLegend">
+      Archaon is the Everchosen, the favoured warlord of the Dark Pantheon. From atop Dorghar, the monstrous Steed of the Apocalypse, Archaon commands his legions with an iron fist, his deadly skill and unholy powers sealing the doom of entire armies.
+     </div>
+     <div class="wsTable">
+      <table border="1" cellpadding="2" cellspacing="0" style="border-collapse:collapse;border-width:0px">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsHeaderCellName wsHeaderCellName_MeleeWeapons">
+          <span class="wsHeaderCellName_short">
+           MELEE WEAPONS
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Range
+         </td>
+         <td class="wsHeaderCell">
+          Attacks
+         </td>
+         <td class="wsHeaderCell">
+          To Hit
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           To Wound
+          </span>
+          <span class="wsHeaderCell_short">
+           To Wnd
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Rend
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           Damage
+          </span>
+          <span class="wsHeaderCell_short">
+           Dmg
+          </span>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          The Slayer of Kings
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          The Slayer of Kings
+         </td>
+         <td class="wsDataCell">
+          1"
+         </td>
+         <td class="wsDataCell">
+          4
+         </td>
+         <td class="wsDataCell">
+          2+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -2
+         </td>
+         <td class="wsDataCell">
+          3
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Monstrous Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Monstrous Claws
+         </td>
+         <td class="wsDataCell">
+          1"
+         </td>
+         <td class="wsDataCell">
+          2
+         </td>
+         <td class="wsDataCell">
+          2+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -2
+         </td>
+         <td class="wsDataCell">
+          <img class="ast" src="/aos3/img/asterix.png"/>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Lashing Tails
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Lashing Tails
+         </td>
+         <td class="wsDataCell">
+          3"
+         </td>
+         <td class="wsDataCell">
+          2D6
+         </td>
+         <td class="wsDataCell">
+          4+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Chimeric Heads
+         </td>
+        </tr>
+        <tr class="wsDataRow wsLastDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsLastDataCell wsDataCell_long">
+          Chimeric Heads
+         </td>
+         <td class="wsLastDataCell">
+          3"
+         </td>
+         <td class="wsLastDataCell">
+          <img class="ast" src="/aos3/img/asterix.png"/>
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          -1
+         </td>
+         <td class="wsLastDataCell">
+          2
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div class="wsTable">
+      <div class="wsDamageHeader">
+       DAMAGE TABLE
+      </div>
+      <table border="1" cellpadding="2" cellspacing="0" class="wsDamageTable">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsDamageWidth wsHeaderCell">
+          Wounds Suffered
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Move
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Chimeric Heads
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Monstrous Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          0-10
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          14"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          6
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          5
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          11-15
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          12"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          5
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          4
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          16-20
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          10"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          4
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          3
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsLastDataCell">
+          21+
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          8"
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          3
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          2
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div style="clear:both">
+     </div>
+     <div class="Columns3_NoRule">
+      <div class="BreakInsideAvoid PitchedBattleProfile ShowPitchedBattleProfile">
+       <div class="wsAbilityHeader">
+        PITCHED BATTLE PROFILE
+       </div>
+       <a href="/aos3/the-rules/the-core-rules/#Pitched-Battle-Profiles">
+        <div class="tooltip_link_inline">
+        </div>
+       </a>
+       <br/>
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         Unit Size
+        </span>
+        <b>
+         :
+        </b>
+        1
+        <span class="redfont">
+         Points
+        </span>
+        <b>
+         :
+        </b>
+        860
+        <br/>
+        <span class="redfont">
+         Battlefield Role
+        </span>
+        <b>
+         :
+        </b>
+        Leader, Behemoth
+        <br/>
+        <span class="ShowBaseSize">
+         <span class="redfont">
+          Base size
+         </span>
+         <b>
+          :
+         </b>
+         160mm
+        </span>
+        <br class="ShowBaseSize"/>
+        <span class="redfont">
+         Notes
+        </span>
+        <b>
+         :
+        </b>
+        Single, Unique
+       </div>
+      </div>
+      <div class="ShowPitchedBattleProfile">
+       <br/>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="BreakInsideAvoid">
+        <b>
+         <i>
+          Archaon, the Everchosen, is armed with the Slayer of Kings.
+         </i>
+        </b>
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         WIZARD
+        </span>
+        <b>
+         :
+        </b>
+        This unit can attempt to
+        <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+         <span class="tt kwbu">
+          cast
+         </span>
+        </span>
+        2
+        <a href="/aos3/the-rules/the-core-rules/#Spells">
+         spells
+        </a>
+        in your
+        <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+         hero phase
+        </a>
+        and attempt to
+        <span class="tooltip00005" data-tooltip-content="#tooltip_content00005">
+         <span class="tt kwbu">
+          unbind
+         </span>
+        </span>
+        2 spells in the enemy hero phase.
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        WARMASTER
+       </span>
+       <b>
+        :
+       </b>
+       If this unit is included in your army, it is treated as a
+       <span class="tooltip00023" data-tooltip-content="#tooltip_content00023">
+        <span class="tt kwbu">
+         general
+        </span>
+       </span>
+       even if it is not the model picked to be the army?s general. In addition, this unit can be included in a
+       <a href="/aos3/factions/blades-of-khorne">
+        Blades of Khorne
+       </a>
+       ,
+       <a href="/aos3/factions/disciples-of-tzeentch">
+        Disciples of Tzeentch
+       </a>
+       ,
+       <a href="/aos3/factions/maggotkin-of-nurgle">
+        Maggotkin of Nurgle
+       </a>
+       or
+       <a href="/aos3/factions/hedonites-of-slaanesh">
+        Hedonites of Slaanesh
+       </a>
+       army. If you do so, you can still use the army?s
+       <a href="/aos3/the-rules/the-core-rules/#Allegiance-Abilities">
+        allegiance abilities
+       </a>
+       even though this unit is not from the army?s
+       <a href="/aos3/the-rules/the-core-rules/#Factions-Battletomes-and-Battlepacks">
+        faction
+       </a>
+       ; however, this unit does not benefit from them.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        FLY
+       </span>
+       <b>
+        :
+       </b>
+       This unit can
+       <span class="tooltip00024" data-tooltip-content="#tooltip_content00024">
+        <span class="tt kwbu">
+         fly
+        </span>
+       </span>
+       .
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        MOUNT
+       </span>
+       <b>
+        :
+       </b>
+       This unit?s
+       <span class="tooltip00025" data-tooltip-content="#tooltip_content00025">
+        <span class="tt kwbu">
+         mount
+        </span>
+       </span>
+       , Dorghar, is armed with Monstrous Claws, Lashing Tails and Chimeric Heads.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        The Armour of Morkar
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Archaon?s armour is inscribed with powerful sigils of warding.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       This unit has a
+       <span class="tooltip00016" data-tooltip-content="#tooltip_content00016">
+        <span class="tt kwbu">
+         ward
+        </span>
+       </span>
+       of 5+. In addition, for each unmodified ward roll of 6, you can pick 1 enemy unit within 3" to suffer 1
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wound
+        </span>
+       </span>
+       that cannot be negated.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        By My Will
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        All Slaves to Darkness recognise Archaon?s supreme authority, and fear his wrath more than any foe should they fail him.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       This is a
+       <span class="tooltip00026" data-tooltip-content="#tooltip_content00026">
+        <span class="tt kwbu">
+         command
+        </span>
+        <span class="tt kwbu">
+         ability
+        </span>
+       </span>
+       this unit can issue at the start of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       . Another friendly
+       <span class="kwb">
+        CHAOS
+       </span>
+       unit must receive it (this unit cannot
+       <span class="tooltip00026" data-tooltip-content="#tooltip_content00026">
+        <span class="tt kwbu">
+         issue
+        </span>
+        <span class="tt kwbu">
+         this
+        </span>
+        <span class="tt kwbu">
+         command
+        </span>
+       </span>
+       to itself). Until the end of that phase, each time a model in the receiving unit is slain it can fight.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        The Crown of Domination
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        This forbidding helm exudes a palpable aura of menace.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Enemy units cannot receive the
+       <span class="tooltip00027" data-tooltip-content="#tooltip_content00027">
+        <span class="tt kwbu">
+         Rally
+        </span>
+       </span>
+       and
+       <span class="tooltip00028" data-tooltip-content="#tooltip_content00028">
+        <span class="tt kwbu">
+         Inspiring
+        </span>
+        <span class="tt kwbu">
+         Presence
+        </span>
+       </span>
+       commands while they are within 12" of this unit.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        The Everchosen
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        The Ruinous Powers shelter their champion from hostile enemy magics.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Each time this unit is affected by a
+       <a href="/aos3/the-rules/the-core-rules/#Spell-Lores">
+        spell
+       </a>
+       or the
+       <a href="/aos3/the-rules/the-core-rules/#Abilities">
+        abilities
+       </a>
+       of an
+       <a href="/aos3/the-rules/the-core-rules/#Endless-Spells">
+        endless spell
+       </a>
+       , you can roll a dice. If you do so, on a 4+, ignore the effects of that spell or endless spell on this unit.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        The Eye of Sheerian
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Ripped from the corpse of the Chaos Dragon Flamefang, this ancient treasure forewarns Archaon of events yet to pass and with this foresight the Everchosen can adapt his strategies to the flow of the battle and always stay a step ahead of his opponents.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Once per battle, at the start of your
+       <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+        hero phase
+       </a>
+       , if Archaon is in a
+       <a href="/aos3/factions/slaves-to-darkness">
+        Slaves to Darkness
+       </a>
+       army you command and on the battlefield, you can say he will consult the Eye of Sheerian. If you do so, roll a dice. This dice roll replaces
+       <a href="/aos3/the-rules/the-core-rules/#The-Priority-Roll">
+        the priority roll
+       </a>
+       of the next battle round. On a 1-3 your opponent must take the first turn of that battle round. On a 4-6 you must take the first turn of that battle round. This ability cannot be used while there is an enemy Archaon on the battlefield.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        The Favoured Warlord
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Each of the Chaos Gods seeks Archaon s favour and, in turn, the Everchosen manipulates their power to further his own ends.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If this unit is part of a
+       <a href="/aos3/factions/slaves-to-darkness">
+        Slaves to Darkness
+       </a>
+       army, after the players have received their
+       <a href="/aos3/the-rules/the-core-rules/#Starting-Command-Points">
+        starting command points
+       </a>
+       but before the start of the first turn, you can pick 1 of the following
+       <a href="/aos3/factions/slaves-to-darkness/#Mark-of-Chaos">
+        Mark of Chaos
+       </a>
+       keywords;
+       <span class="kwb">
+        KHORNE
+       </span>
+       ,
+       <span class="kwb">
+        TZEENTCH
+       </span>
+       ,
+       <span class="kwb">
+        NURGLE
+       </span>
+       or
+       <span class="kwb">
+        SLAANESH
+       </span>
+       . This unit has that Mark of Chaos for the battle in addition to the
+       <span class="kwb">
+        UNDIVIDED
+       </span>
+       Mark of Chaos.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        The Slayer of Kings
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        This ancient daemonblade thirsts for the souls of champions and warlords.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       Each time this unit fights, if the unmodified
+       <span class="tooltip00017" data-tooltip-content="#tooltip_content00017">
+        <span class="tt kwbu">
+         wound
+        </span>
+        <span class="tt kwbu">
+         roll
+        </span>
+       </span>
+       for 2 or more attacks that target the same enemy
+       <span class="kwb">
+        HERO
+       </span>
+       with the Slayer of Kings is 6, that
+       <span class="kwb">
+        HERO
+       </span>
+       is slain.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <span class="redfont">
+       Three-headed Titan
+      </span>
+      <b>
+       :
+      </b>
+      <span class="ShowFluff legend4">
+       The greater daemons consumed by Dorghar imbue the steed with unlimited power.
+       <br/>
+       <div class="spc">
+       </div>
+      </span>
+      When you carry out a
+      <a href="/aos3/the-rules/the-core-rules/#Monstrous-Rampage">
+       monstrous rampage
+      </a>
+      with this unit, you can carry out a monstrous rampage from the list below instead of from the table in the core rules:
+      <br/>
+      <br/>
+      <i>
+       <b>
+        Filth-spewer:
+       </b>
+      </i>
+      Pick 1 enemy unit within 6" of this unit and roll a number of dice equal to the number of models in that unit (to a maximum of 7). For each 3+, that unit suffers 1
+      <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+       <span class="tt kwbu">
+        mortal
+       </span>
+       <span class="tt kwbu">
+        wound
+       </span>
+      </span>
+      .
+      <br/>
+      <br/>
+      <i>
+       <b>
+        Skull-gorger:
+       </b>
+      </i>
+      Pick 1 enemy model within 3" ot this unit and roll a dice. If the roll is greater than that model?s Wounds characteristic, it is slain and you can
+      <span class="tooltip00007" data-tooltip-content="#tooltip_content00007">
+       <span class="tt kwbu">
+        heal
+       </span>
+      </span>
+      a number of wounds allocated to this unit equal to that enemy model?s Wounds characteristic.
+      <br/>
+      <br/>
+      <i>
+       <b>
+        Spell-eater:
+       </b>
+      </i>
+      Pick 1
+      <a href="/aos3/the-rules/the-core-rules/#Endless-Spells">
+       endless spell
+      </a>
+      within 12" of this unit and roll a dice, On a 2+, that endless spell is
+      <span class="tooltip00006" data-tooltip-content="#tooltip_content00006">
+       <span class="tt kwbu">
+        dispelled
+       </span>
+      </span>
+      and if the caster is on the battlefield they suffer D3
+      <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+       <span class="tt kwbu">
+        mortal
+       </span>
+       <span class="tt kwbu">
+        wounds
+       </span>
+      </span>
+      .
+     </div>
+     <div style="clear:both">
+      <br/>
+     </div>
+     <table border="0" cellpadding="8" cellspacing="0" width="100%">
+      <tbody>
+       <tr>
+        <td class="wsKeywordHeader">
+         <div style="font-weight:700; font-family:'Minion-Pro',serif;">
+          KEYWORDS
+         </div>
+        </td>
+        <td class="wsKeywordLine">
+         <div style="font-weight:bold">
+          <span class="tooltipCHAOS" data-tooltip-anchor="#tooltip_contentCHAOS" data-tooltip-content="#tooltip_contentCHAOS">
+           <span class="kwb kwbu">
+            CHAOS
+           </span>
+          </span>
+          ,
+          <span class="kwb">
+           SLAVES
+          </span>
+          <span class="kwb2">
+           TO
+          </span>
+          <span class="kwb">
+           DARKNESS
+          </span>
+          ,
+          <span class="kwb">
+           HOST
+          </span>
+          <span class="kwb2">
+           OF
+          </span>
+          <span class="kwb2">
+           THE
+          </span>
+          <span class="kwb">
+           EVERCHOSEN
+          </span>
+          ,
+          <span class="tooltipUNDIVIDED" data-tooltip-anchor="#tooltip_contentUNDIVIDED" data-tooltip-content="#tooltip_contentUNDIVIDED">
+           <span class="kwb kwbu">
+            UNDIVIDED
+           </span>
+          </span>
+          ,
+          <span class="tooltipDAEMON" data-tooltip-anchor="#tooltip_contentDAEMON" data-tooltip-content="#tooltip_contentDAEMON">
+           <span class="kwb kwbu">
+            DAEMON
+           </span>
+          </span>
+          ,
+          <span class="tooltipMORTAL" data-tooltip-anchor="#tooltip_contentMORTAL" data-tooltip-content="#tooltip_contentMORTAL">
+           <span class="kwb kwbu">
+            MORTAL
+           </span>
+          </span>
+          ,
+          <span class="tooltipMONSTER" data-tooltip-anchor="#tooltip_contentMONSTER" data-tooltip-content="#tooltip_contentMONSTER">
+           <span class="kwb kwbu">
+            MONSTER
+           </span>
+          </span>
+          ,
+          <span class="tooltipHERO" data-tooltip-anchor="#tooltip_contentHERO" data-tooltip-content="#tooltip_contentHERO">
+           <span class="kwb kwbu">
+            HERO
+           </span>
+          </span>
+          ,
+          <span class="tooltipWIZARD" data-tooltip-anchor="#tooltip_contentWIZARD" data-tooltip-content="#tooltip_contentWIZARD">
+           <span class="kwb kwbu">
+            WIZARD
+           </span>
+          </span>
+          ,
+          <span class="kwb">
+           ARCHAON
+          </span>
+         </div>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div style="clear:both">
+    </div>
+    <div class="clFl sLegendary sForgeWorld">
+     <br/>
+     <br/>
+    </div>
+    <div class="datasheet pagebreak clFl sLegendary sForgeWorld" style="position:relative">
+     <a name="Soulfeaster-Keeper-of-Secrets">
+     </a>
+     <div class="AoS_profile">
+      <div class="wsMoveCt wsMoveSmallFontSize">
+       <img src="/aos3/img/asterix.png"/>
+      </div>
+      <div class="wsWounds">
+       14
+      </div>
+      <div class="wsSave">
+       4+
+      </div>
+      <div class="wsBravery">
+       10
+      </div>
+     </div>
+     <div>
+      <div class="nails-header">
+       <span class="nails">
+       </span>
+       WARSCROLL
+       <span class="nails">
+       </span>
+      </div>
+      <img class="tooltip logo3" src="/aos3/img/expansions/FW_AoS_logo3.png" title="Expansion. Compendium: Monstrous Arcanum (3rd edition)"/>
+      <h3 class="wsHeader">
+       <div>
+        Soulfeaster Keeper of Secrets*
+        <a href="https://www.google.com/search?tbm=isch&amp;q=Age%20of%20Sigmar%20Hedonites%20of%20Slaanesh%20Soulfeaster%20Keeper%20of%20Secrets%20miniature" target="_blank">
+         <div class="tooltip picSearch" title="Search for model?s image on the Internet">
+         </div>
+        </a>
+       </div>
+      </h3>
+     </div>
+     <div class="ShowFluff wsLegend">
+      Soulfeaster Keepers of Secrets are sensation addicts, devoted above all to the pursuit of new experiences. They roam the battlefield at their own ecstatic whim, using their stabbing tendrils to gorge themselves on the emotions of their victims.
+     </div>
+     <div class="wsTable">
+      <table border="1" cellpadding="2" cellspacing="0" style="border-collapse:collapse;border-width:0px">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsHeaderCellName wsHeaderCellName_MeleeWeapons">
+          <span class="wsHeaderCellName_short">
+           MELEE WEAPONS
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Range
+         </td>
+         <td class="wsHeaderCell">
+          Attacks
+         </td>
+         <td class="wsHeaderCell">
+          To Hit
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           To Wound
+          </span>
+          <span class="wsHeaderCell_short">
+           To Wnd
+          </span>
+         </td>
+         <td class="wsHeaderCell">
+          Rend
+         </td>
+         <td class="wsHeaderCell">
+          <span class="wsHeaderCell_long">
+           Damage
+          </span>
+          <span class="wsHeaderCell_short">
+           Dmg
+          </span>
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Sinistrous Hand
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Sinistrous Hand
+         </td>
+         <td class="wsDataCell">
+          1"
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+         <td class="wsDataCell">
+          2+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -1
+         </td>
+         <td class="wsDataCell">
+          1
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Elegant Greatblade
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsDataCell wsDataCell_long">
+          Elegant Greatblade
+         </td>
+         <td class="wsDataCell">
+          2"
+         </td>
+         <td class="wsDataCell">
+          <img class="ast" src="/aos3/img/asterix.png"/>
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          3+
+         </td>
+         <td class="wsDataCell">
+          -1
+         </td>
+         <td class="wsDataCell">
+          2
+         </td>
+        </tr>
+        <tr class="wsDataRow wsDataCell_short">
+         <td colspan="7" style="border-width:0px">
+          Impaling Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow wsLastDataCell">
+         <td class="wsDataCell_short">
+         </td>
+         <td class="wsLastDataCell wsDataCell_long">
+          Impaling Claws
+         </td>
+         <td class="wsLastDataCell">
+          3"
+         </td>
+         <td class="wsLastDataCell">
+          2
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          3+
+         </td>
+         <td class="wsLastDataCell">
+          -2
+         </td>
+         <td class="wsLastDataCell">
+          <img class="ast" src="/aos3/img/asterix.png"/>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div class="wsTable">
+      <div class="wsFooter">
+       <b>
+        *
+       </b>
+       This warscroll is part of the Warhammer Legends range of rules and can be used in any type of play - open, narrative or matched. However  Legends units are not updated by GW and not supported by Wahapedia and therefore not recommended for competitive tournaments.
+      </div>
+     </div>
+     <div class="wsTable">
+      <div class="wsDamageHeader">
+       DAMAGE TABLE
+      </div>
+      <table border="1" cellpadding="2" cellspacing="0" class="wsDamageTable">
+       <tbody>
+        <tr class="wsHeaderRow">
+         <td class="wsDamageWidth wsHeaderCell">
+          Wounds Suffered
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Move
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Elegant Greatblade
+         </td>
+         <td class="wsDamageWidth wsHeaderCell">
+          Impaling Claws
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          0-6
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          14"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          4
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          5
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          7-9
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          12"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          3
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          4
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsDataCell">
+          10-12
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          10"
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          3
+         </td>
+         <td class="wsDamageWidth wsDataCell">
+          3
+         </td>
+        </tr>
+        <tr class="wsDataRow">
+         <td class="wsDamageWidth wsLastDataCell">
+          13+
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          8"
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          2
+         </td>
+         <td class="wsDamageWidth wsLastDataCell">
+          3
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div style="clear:both">
+     </div>
+     <div class="Columns3_NoRule">
+      <div class="BreakInsideAvoid PitchedBattleProfile ShowPitchedBattleProfile">
+       <div class="wsAbilityHeader">
+        PITCHED BATTLE PROFILE
+       </div>
+       <a href="/aos3/the-rules/the-core-rules/#Pitched-Battle-Profiles">
+        <div class="tooltip_link_inline">
+        </div>
+       </a>
+       <br/>
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         Unit Size
+        </span>
+        <b>
+         :
+        </b>
+        1
+        <span class="redfont">
+         Points
+        </span>
+        <b>
+         :
+        </b>
+        385
+        <br/>
+        <span class="redfont">
+         Battlefield Role
+        </span>
+        <b>
+         :
+        </b>
+        Leader, Behemoth
+        <br/>
+        <span class="ShowBaseSize">
+         <span class="redfont">
+          Base size
+         </span>
+         <b>
+          :
+         </b>
+         105 x 70mm
+        </span>
+        <br class="ShowBaseSize"/>
+        <span class="redfont">
+         Notes
+        </span>
+        <b>
+         :
+        </b>
+        Single
+       </div>
+      </div>
+      <div class="ShowPitchedBattleProfile">
+       <br/>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="wsAbilityHeader">
+        BATTALIONS
+       </div>
+       <br/>
+       <div class="BreakInsideAvoid">
+        This warscroll can be used in the following warscroll battalions:
+        <br/>
+        ?
+        <a href="/aos3/factions/hedonites-of-slaanesh/warscrolls.html#Supreme-Sybarites">
+         Supreme Sybarites
+        </a>
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="wsAbilityHeader">
+        DESCRIPTION
+       </div>
+       <br/>
+       <div class="BreakInsideAvoid">
+        A Soulfeaster Keeper of Secrets is armed with an Elegant Greatblade, Impaling Claws and a Sinistrous Hand.
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        WIZARD
+       </span>
+       <b>
+        :
+       </b>
+       This model can attempt to
+       <span class="tooltip00004" data-tooltip-content="#tooltip_content00004">
+        <span class="tt kwbu">
+         cast
+        </span>
+       </span>
+       2 spells in your
+       <a href="/aos3/the-rules/the-core-rules/#Hero-Phase">
+        hero phase
+       </a>
+       and attempt to
+       <span class="tooltip00005" data-tooltip-content="#tooltip_content00005">
+        <span class="tt kwbu">
+         unbind
+        </span>
+       </span>
+       2 spells in the enemy hero phase.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <div class="wsAbilityHeader">
+        ABILITIES
+       </div>
+       <br/>
+       <div class="BreakInsideAvoid">
+        <span class="redfont">
+         Dark Temptations
+        </span>
+        <b>
+         :
+        </b>
+        <span class="ShowFluff legend4">
+         Few can resist the temptations whispered by a Keeper of Secrets.
+         <br/>
+         <div class="spc">
+         </div>
+        </span>
+        At the start of the
+        <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+         combat phase
+        </a>
+        , you can pick 1 enemy
+        <span class="kwb">
+         HERO
+        </span>
+        within 3" of this model and ask your opponent if they wish for that
+        <span class="kwb">
+         HERO
+        </span>
+        to accept temptation. If they refuse, that
+        <span class="kwb">
+         HERO
+        </span>
+        suffers D3
+        <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+         <span class="tt kwbu">
+          mortal
+         </span>
+         <span class="tt kwbu">
+          wounds
+         </span>
+        </span>
+        . If they accept, add 1 to
+        <span class="tooltip00022" data-tooltip-content="#tooltip_content00022">
+         <span class="tt kwbu">
+          hit
+         </span>
+         <span class="tt kwbu">
+          rolls
+         </span>
+        </span>
+        for attacks made by that
+        <span class="kwb">
+         HERO
+        </span>
+        . Then, at the start of the next combat phase, roll a dice. On 1-3, that
+        <span class="kwb">
+         HERO
+        </span>
+        no longer receives this
+        <span class="tooltip00030" data-tooltip-content="#tooltip_content00030">
+         <span class="tt kwbu">
+          modifier
+         </span>
+        </span>
+        to their hit rolls. On 4-6, that
+        <span class="kwb">
+         HERO
+        </span>
+        is slain.
+        <div>
+         <br/>
+        </div>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Delicate Precision
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        A Keeper of Secrets attacks their foes with a dazzling array of exquisitely measured blows.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       If the unmodified
+       <span class="tooltip00017" data-tooltip-content="#tooltip_content00017">
+        <span class="tt kwbu">
+         wound
+        </span>
+        <span class="tt kwbu">
+         roll
+        </span>
+       </span>
+       for an attack made with a melee weapon by this model is 6, that attack causes a number of
+       <span class="tooltip00008" data-tooltip-content="#tooltip_content00008">
+        <span class="tt kwbu">
+         mortal
+        </span>
+        <span class="tt kwbu">
+         wounds
+        </span>
+       </span>
+       to the target equal to the Damage characteristic of the weapon used for the attack and the
+       <a href="/aos3/the-rules/the-core-rules/#Attack-Sequence">
+        attack sequence
+       </a>
+       ends (do not make a save roll).
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Sinistrous Hand
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        Reaching out with their longnailed fingers, the Keeper of Secrets rips the heart from their dying victim?s chest and consumes the still-beating organ.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       At the end of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , if any enemy models were slain by wounds inflicted by this model?s attacks in that combat phase, you can
+       <span class="tooltip00007" data-tooltip-content="#tooltip_content00007">
+        <span class="tt kwbu">
+         heal
+        </span>
+       </span>
+       up to D3 wounds allocated to this model. If any enemy
+       <span class="kwb">
+        HEROES
+       </span>
+       were slain by wounds inflicted by this model?s attacks in that combat phase, you can heal up to D6 wounds allocated to this model instead.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Soulfeaster Tendrils
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        The cruel tendrils that snake from the rear of a Soulfeaster Keeper of Secrets? head are the means through which it feeds on sensation, stabbing into the mind of a chosen adversary and drinking deep their agony and desire.
+        <br/>
+        <div class="spc">
+        </div>
+       </span>
+       At the start of the
+       <a href="/aos3/the-rules/the-core-rules/#Combat-Phase">
+        combat phase
+       </a>
+       , you can pick 1 enemy
+       <span class="kwb">
+        HERO
+       </span>
+       within 3" of this model and roll 3D6. If the roll is greater than that model?s Bravery characteristic, you gain D3
+       <a href="/aos3/factions/hedonites-of-slaanesh/#Euphoric-Killers">
+        depravity points
+       </a>
+       and 1 is subtracted from
+       <span class="tooltip00022" data-tooltip-content="#tooltip_content00022">
+        <span class="tt kwbu">
+         hit
+        </span>
+        <span class="tt kwbu">
+         rolls
+        </span>
+       </span>
+       for attacks made by that
+       <span class="kwb">
+        HERO
+       </span>
+       until the end of that phase.
+       <div>
+        <br/>
+       </div>
+      </div>
+      <div class="BreakInsideAvoid">
+       <span class="redfont">
+        Cacophonic Choir
+       </span>
+       <b>
+        :
+       </b>
+       <span class="ShowFluff legend4">
+        The Keeper of Secrets unleashes a sanity

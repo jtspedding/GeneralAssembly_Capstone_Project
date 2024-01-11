@@ -1,0 +1,173 @@
+﻿id,unit_name,weapon_name,Range,A,H,W,R,D,Move,Wounds,Bravery,Save,Ward,Ability,unit_size,Points_per_warscroll,Spells,slaanesh_dummy
+1,Glutos,Wailing Greatblade,1,3,3,3,2,2,8,18,9,3,5,"""""",1,440,2,1
+2,Glutos,Flaying Scourge,1,2,3,4,0,1,8,18,9,3,5,"""""",1,440,2,1
+3,Glutos,Sacrificial Dagger,1,1,4,3,0,1,8,18,9,3,5,"""""",1,440,2,1
+4,Glutos,Crushing Claws,1,6,3,3,1,3,8,18,9,3,5,"""""",1,440,2,1
+5,Keeper,Elegant Greatblade,2,4,3,3,1,2,14,14,10,4,6,"""""",1,370,2,1
+6,Keeper,Impaling Claws,3,2,3,3,2,5,14,14,10,4,6,"""""",1,370,2,1
+7,Shalaxi,Soulpiercer,3,1,2,2,3,D6,14,14,10,4,6,"""""",1,350,2,1
+8,Shalaxi,Impaling Claws,3,2,3,3,2,5,14,14,10,3,6,"""""",1,350,2,1
+9,Syll’Esske,Axe of Dominion,2,4,4,3,2,D3,8,9,10,4,0,"""""",1,170,1,1
+10,Syll’Esske,Scourging Whip,2,8,3,4,1,1,8,9,10,4,0,"""""",1,170,1,1
+11,Archaon,The Slayer of Kings,1,4,2,3,2,3,14,25,10,3,0,"""""",1,860,2,0
+12,Archaon,Monstrous Claws,1,2,2,3,2,5,14,25,10,3,0,"""""",1,860,2,0
+13,Archaon,Lashing Tails,3,2D6,4,3,0,1,14,25,10,3,0,"""""",1,860,2,0
+14,Archaon,Chimeric Heads,3,6,3,3,1,2,14,25,10,3,0,"""""",1,860,2,0
+15,"Bladebringer, Herald on Exalted Chariot",Flensing Whips,2,6,3,4,1,1,10,10,10,4,0,"""Impact.each.round""",1,230,1,1
+16,"Bladebringer, Herald on Exalted Chariot",Piercing Claws,1,9,3,4,1,1,10,10,10,4,0,"""Impact.each.round""",1,230,1,1
+17,"Bladebringer, Herald on Exalted Chariot",Poisoned Tongues,1,8,3,4,0,1,10,10,10,4,0,"""Impact.each.round""",1,230,1,1
+18,"Bladebringer, Herald on Hellflayer",Ravaging Claws,1,6,3,4,1,1,12,9,10,4,0,"""Lesser.impact.each.round""",1,200,1,1
+19,"Bladebringer, Herald on Hellflayer",Piercing Claws and Flensing Whips,2,6,3,4,1,1,12,9,10,4,0,"""Lesser.impact.each.round""",1,200,1,1
+20,"Bladebringer, Herald on Hellflayer",Poisoned Tongues,1,4,3,4,0,1,12,9,10,4,0,"""Lesser.impact.each.round""",1,200,1,1
+21,"Bladebringer, Herald on Seeker Chariot",Flensing Whips,2,6,3,4,1,1,12,8,10,4,0,"""Impact.on.charge""",1,170,1,1
+22,"Bladebringer, Herald on Seeker Chariot",Piercing Claws,1,3,3,4,1,1,12,8,10,4,0,"""Impact.on.charge""",1,170,1,1
+23,"Bladebringer, Herald on Seeker Chariot",Poisoned Tongues,1,4,3,4,0,1,12,8,10,4,0,"""Impact.on.charge""",1,170,1,1
+24,Infernal Enrapturess,Heartstring Lyre: Cacophonous Melody,18,6,3,4,1,1,6,5,10,5,0,"""Can.dispell""",1,120,0,1
+25,Infernal Enrapturess,Heartstring Lyre: Euphonic Blast,24,1,2,3,3,D3,6,5,10,5,0,"""Can.dispell""",1,120,0,1
+26,Infernal Enrapturess,Ravaging Claw,1,3,3,4,1,1,6,5,10,5,0,"""Can.dispell""",1,120,0,1
+27,Lord of Pain,Soulpiercer Mace,2,5,3,3,1,2,6,5,7,4,5,"""""",1,130,0,1
+28,Shardspeaker ,Haze Staff,1,2,4,3,0,D3,6,5,7,5,0,"""""",1,130,1,1
+29,Shardspeaker ,Shadow-cloaked Claws,2,4,3,3,2,1,6,5,7,5,0,"""""",1,130,1,1
+30,Sigvald,Shardslash,1,sigvald.charge,2,3,2,D3,6,6,9,3,4,"""""",1,210,0,1
+31,Contorted Epitome,Ravaging Claws,1,9,3,4,1,1,12,7,10,5,0,"""""",1,240,2,1
+32,Contorted Epitome,Coiled Tentacles,3,2,3,4,2,2,12,7,10,5,0,"""""",1,240,2,1
+33,The Masque,Ravaging Claws,1,6,3,4,1,1,10,5,10,5,4,"""reroll.hits""",1,110,0,1
+34,"Viceleader, Herald of Slaanesh",Ravaging Claws,1,6,3,4,1,1,6,5,10,5,5,"""""",1,130,1,1
+35,Dexcessa,Scourge of Slaanesh,3,4,2,3,1,2,12,10,10,4,0,"""adds.attack.each.turn""",1,240,0,1
+36,Dexcessa,Impaling Talons,1,2,3,3,2,2,12,10,10,4,0,"""adds.attack.each.turn""",1,240,0,1
+37,Synessa,Staff of Slaanesh,18,1,1,4,6,D3,12,9,10,4,0,"""""",1,240,1,1
+38,Synessa,Impaling Talons,1,3,3,3,2,2,12,9,10,4,0,"""""",1,240,1,1
+39,Blissbarb Archers,Blissbarb Bow,18,2,4,3,1,1,6,1,5,5,0,"""""",10,140,0,1
+40,Daemonettes,Piercing Claws,1,2,4,4,1,1,6,1,10,5,0,"""""",10,110,0,1
+41,Hellstriders with Claw-spears,Claw-spear,1,1,3,4,1,1,14,2,8,4,0,"""D2.on.charge""",5,120,0,1
+42,Hellstriders with Claw-spears,Poisoned Tongue,1,2,3,4,0,1,14,2,8,4,0,"""D2.on.charge""",5,120,0,1
+43,Hellstriders with Hellscourges,Hellscourge,3,2,3,4,0,1,14,2,8,4,0,"""""",5,120,0,1
+44,Hellstriders with Hellscourges,Poisoned Tongue,1,2,3,4,0,1,14,2,8,4,0,"""""",5,120,0,1
+45,Blissbarb Seekers,Blissbarb Bow,18,3,4,4,1,1,14,4,6,5,0,"""W6.mortal.seq.ends""",5,210,0,1
+46,Exalted Chariot,Flensing Whips,2,4,3,4,1,1,10,9,10,4,0,"""Lesser.impact.on.charge, lesser.impact.each.round""",1,180,0,1
+47,Exalted Chariot,Piercing Claws,1,9,3,4,1,1,10,9,10,4,0,"""Lesser.impact.on.charge, lesser.impact.each.round""",1,180,0,1
+48,Exalted Chariot,Poisoned Tongues,1,8,3,4,0,1,10,9,10,4,0,"""Lesser.impact.on.charge, lesser.impact.each.round""",1,180,0,1
+49,Fiends,Deadly Pincers,1,4,3,3,1,1,12,4,10,5,0,"""H6.does.D3""",3,170,0,1
+50,Fiends,Barbed Stinger,2,1,3,3,1,D6,12,4,10,5,0,"""H6.does.D3""",3,170,0,1
+51,Hellflayer,Piercing Claws,1,4,3,4,1,1,12,7,10,4,0,"""lesser.impact.each.round""",1,140,0,1
+52,Hellflayer,Piercing Claws and Flensing Whips,2,6,3,4,1,1,12,7,10,4,0,"""lesser.impact.each.round""",1,140,0,1
+53,Hellflayer,Poisoned Tongues,1,4,3,4,0,1,12,7,10,4,0,"""lesser.impact.each.round""",1,140,0,1
+54,Painbringers,Wicked Scimitar,1,2,3,3,1,1,6,2,7,4,0,"""W6.mortal.in.addition""",5,110,0,1
+55,Seeker Chariots,Flensing Whips,2,4,3,4,1,1,12,6,10,4,0,"""lesser.impact.on.charge""",1,110,0,1
+56,Seeker Chariots,Piercing Claws,1,3,3,4,1,1,12,6,10,4,0,"""lesser.impact.on.charge""",1,110,0,1
+57,Seeker Chariots,Poisoned Tongues,1,4,3,4,0,1,12,6,10,4,0,"""lesser.impact.on.charge""",1,110,0,1
+58,Seekers,Piercing Claws,1,2,3,4,1,1,14,2,10,5,0,"""""",5,130,0,1
+59,Seekers,Poisoned Tongue,1,2,3,4,0,1,14,2,10,5,0,"""""",5,130,0,1
+60,Slaangor Fiendbloods,Razor-sharp Claw(s),2,3,4,3,1,1,8,3,6,5,0,"""""",3,110,0,1
+61,Slaangor Fiendbloods,Gilded Weapon,1,2,4,3,1,2,8,3,6,5,0,"""""",3,110,0,1
+62,Slickblade Seekers,Slickblade Glaive,2,3,3,3,1,1,14,4,6,5,0,"""W6.mortal.in.addition""",5,210,0,1
+63,Slickblade Seekers,Poisoned Tongue,1,2,3,3,0,1,14,4,6,5,0,"""W6.mortal.in.addition""",5,210,0,1
+64,Twinsouls,Merciless Blades,2,3,4,3,0,2,8,2,7,4,6,"""Ward5/reroll""",5,130,0,1
+65,Be’lakor,Blade of Shadows,2,8,3,3,2,2,14,14,10,4,0,"""""",1,355,2,0
+66,Be’lakor,Fell Claw,1,1,3,3,1,2,14,14,10,4,0,"""""",1,355,2,0
+67,Be’lakor,Spearing Tail,3,1,2,1,3,2,14,14,10,4,0,"""""",1,355,2,0
+68,Centaurion Marshal,Mauling Spear,2,4,3,3,1,2,8,10,8,4,0,"""""",1,145,0,0
+69,Centaurion Marshal,Skull Bludgeon and Varanspire Gladius,1,6,3,3,0,1,8,10,8,4,0,"""""",1,145,0,0
+70,Chaos Lord,Reaperblade,2,3,3,3,2,2,5,6,9,3,0,"""H6.mortal.in.addition""",1,115,0,0
+71,Chaos Lord,Daemonbound Steel,1,3,3,3,1,1,5,6,9,3,0,"""H6.mortal.in.addition""",1,115,0,0
+72,Chaos Lord on Daemonic Mount,Cursed Warhammer,1,4,3,3,1,2,10,8,9,3,0,"""""",1,170,0,0
+73,Chaos Lord on Daemonic Mount,Mighty Hooves,1,3,4,3,0,1,10,8,9,3,0,"""""",1,170,0,0
+74,Chaos Lord on Karkadrak,Hexed Battle-axe,1,4,3,3,1,2,9,9,9,3,0,"""chaos.impact, H6.mortal.in.addition""",1,220,0,0
+75,Chaos Lord on Karkadrak,Daemonbound Blade,1,3,3,3,2,D3,9,9,9,3,0,"""chaos.impact, H6.mortal.in.addition""",1,220,0,0
+76,Chaos Lord on Karkadrak,Tearing Horn and Claws,1,4,4,3,1,2,9,9,9,3,0,"""chaos.impact, H6.mortal.in.addition""",1,220,0,0
+77,Chaos Sorcerer Lord,Sorcerer Staff,2,1,4,3,1,D3,5,5,8,4,0,"""""",1,120,1,0
+78,Chaos Sorcerer Lord,Chaos Runeblade,1,2,3,3,0,1,5,5,8,4,0,"""""",1,120,1,0
+79,Ogroid Myrmidon,Gladiator Spear,18,1,3,3,1,D3,6,8,8,4,0,"""H6.explode""",1,130,0,0
+80,Ogroid Myrmidon,Gladiator Spear,2,4,3,3,1,2,6,8,8,4,0,"""H6.explode""",1,130,0,0
+81,Daemon Prince,Malefic Talons,1,8,3,3,0,2,8,10,10,3,6,"""""",1,195,0,0
+82,Gaunt Summoner,Changestaff,18,3,3,3,1,1,5,5,8,6,0,"""deep.strike""",1,210,2,0
+83,Gaunt Summoner,Warptongue Blade,1,2,3,3,2,D3,5,5,8,6,0,"""deep.strike""",1,210,2,0
+84,Gaunt Summoner on Disc of Tzeentch,Changestaff,18,3,3,3,1,1,16,6,8,4,0,"""deep.strike""",1,240,2,0
+85,Gaunt Summoner on Disc of Tzeentch,Warptongue Blade,1,2,3,3,2,D3,16,6,8,4,0,"""deep.strike""",1,240,2,0
+86,Gaunt Summoner on Disc of Tzeentch,Teeth and Horns,1,D3,4,3,1,1,16,6,8,4,0,"""deep.strike""",1,240,2,0
+87,Chaos Chariot,Chaos War-flail,2,6,3,3,0,1,12,7,6,4,0,"""Impact.on.charge""",1,100,0,0
+88,Chaos Chariot,Trampling Hooves,1,4,4,4,0,1,12,7,6,4,0,"""Impact.on.charge""",1,100,0,0
+89,Chaos Knights,Cursed Lance,2,3,4,3,2,2,10,3,7,3,0,"""""",5,230,0,0
+90,Chaos Knights,Trampling Hooves,1,2,4,4,0,1,10,3,7,3,0,"""""",5,230,0,0
+91,Marauder Horsemen,Marauder Javelin,12,1,4,4,1,1,12,2,6,6,0,"""""",5,105,0,0
+92,Marauder Horsemen,Barbarian Flail,1,3,3,4,0,1,12,2,6,6,0,"""""",5,105,0,0
+93,Marauder Horsemen,Trampling Hooves,1,2,4,4,0,1,12,2,6,6,0,"""""",5,105,0,0
+94,Marauders,Barbarian Axe,1,1,4,4,0,1,6,1,6,5,0,"""""",10,85,0,0
+95,Chaos Warriors,Ensorcelled Halberd,2,2,4,3,1,1,5,2,7,3,0,"""""",10,220,0,0
+96,Untamed Beasts,Jagged Harpoon,8,1,3,3,1,D3,6,1,6,6,0,"""pregame.move""",9,90,0,0
+97,Untamed Beasts,Hunting Weapons,1,2,4,4,0,1,6,1,6,6,0,"""pregame.move""",9,90,0,0
+98,Chaos Chosen,Soul Splitter,2,3,3,3,1,2,5,3,9,3,0,"""fight.twice""",5,240,0,0
+99,Fomoroid Crusher,Hurled Terrain,12,2,3,3,1,2,6,10,6,5,0,"""plus.D1.terrain""",1,100,0,0
+100,Fomoroid Crusher,Crushing Fists and Swinging Masonry,1,4,3,3,0,2,6,10,6,5,0,"""plus.D1.terrain""",1,100,0,0
+101,Furies,Claws,1,2,4,3,1,1,12,2,6,6,0,"""retreat.in.combat""",6,90,0,0
+102,Gorebeast Chariot,Lashing Whip,2,2,4,4,0,1,9,8,6,4,0,"""impact.move.after.combat""",1,115,0,0
+103,Gorebeast Chariot,Chaos War-flail,2,6,3,3,0,1,9,8,6,4,0,"""impact.move.after.combat""",1,115,0,0
+104,Gorebeast Chariot,Crushing Fists,1,3,3,3,0,2,9,8,6,4,0,"""impact.move.after.combat""",1,115,0,0
+105,Mindstealer Sphiranx,Shredding Claws,1,5,3,3,1,2,10,10,9,5,0,"""""",1,95,0,0
+106,Ogroid Theridons,Goroan Great Axe,2,3,3,3,2,3,6,5,6,5,0,"""""",3,190,0,0
+107,Raptoryx,Talons,1,2,3,3,0,1,10,2,6,6,0,"""""",6,80,0,0
+108,Chaos Spawn,Freakish Mutations,1,2D6,4,4,0,1,2D6,5,10,5,0,"""""",1,70,0,0
+109,Varanguard,Ensorcelled Weapon,1,5,3,3,1,2,10,5,9,3,0,"""""",3,290,0,0
+110,Varanguard,Tearing Fangs,1,3,4,3,1,1,10,5,9,3,0,"""""",3,290,0,0
+111,Chaos Warshrine,Sacrificial Blade,1,4,3,3,1,2,8,14,8,4,0,"""""",1,185,0,0
+112,Chaos Warshrine,Flailing Fists,1,6,4,3,0,2,8,14,8,4,0,"""""",1,185,0,0
+113,Soul Grinder,Harvester Cannon,16,6,4,3,1,1,12,18,10,4,0,"""""",1,230,0,0
+114,Soul Grinder,Phlegm Bombardment,20,1,4,3,2,3,12,18,10,4,0,"""""",1,230,0,0
+115,Soul Grinder,Hellforged Claw,2,1,4,3,2,D6,12,18,10,4,0,"""""",1,230,0,0
+116,Soul Grinder,Warpmetal Blade,2,2,4,3,2,3,12,18,10,4,0,"""""",1,230,0,0
+117,Soul Grinder,Piston-driven Legs,1,6,4,3,1,2,12,18,10,4,0,"""""",1,230,0,0
+118,Beasts of Chaos Tzaangor Shaman,Staff of Change,2,1,4,3,1,D3,16,6,6,4,0,"""""",1,135,2,0
+119,Beasts of Chaos Tzaangor Shaman,Ritual Dagger,1,2,4,4,0,1,16,6,6,4,0,"""""",1,135,2,0
+120,Beasts of Chaos Tzaangor Shaman,Teeth and Horns,1,D3,4,3,1,D3,16,6,6,4,0,"""""",1,135,2,0
+121,Doombull,Bullgor Horns,1,2,4,4,0,1,7,8,7,4,0,"""H6.mortal.in.addition""",1,110,0,0
+122,Doombull,Slaughterer’s Axe,1,3,3,3,2,3,7,8,7,4,0,"""H6.mortal.in.addition""",1,110,0,0
+123,Dragon Ogor Shaggoth,Storm-wrought Axe,2,3,3,3,1,3,8,10,7,4,0,"""""",1,155,1,0
+124,Dragon Ogor Shaggoth,Sweeping Tail,3,D3,4,3,0,1,8,10,7,4,0,"""""",1,155,1,0
+125,Dragon Ogor Shaggoth,Taloned Forelimbs,1,2,3,3,1,1,8,10,7,4,0,"""""",1,155,1,0
+126,Great Bray-Shaman,Fetish Staff,2,1,4,3,1,D3,6,5,6,6,0,"""""",1,100,1,0
+127,Beastlord,Paired Man-ripper Axes,1,6,3,3,1,1,6,5,7,4,0,"""""",1,95,0,0
+128,Grashrak Fellhoof,Obsidian Blade,1,1,3,3,1,D3,6,5,6,6,0,"""""",1,150,1,0
+129,Gors,Gor Blade(s),1,1,4,4,0,1,6,1,5,4,0,"""reroll.H1""",10,70,0,0
+130,Ungors,Ungor Blade,1,1,4,4,0,1,6,1,4,5,0,"""""",10,65,0,0
+131,Beasts of Chaos Tzaangor Enlightened,Tzeentchian Spear,2,3,4,3,1,2,6,3,6,4,0,"""""",3,95,0,0
+132,Beasts of Chaos Tzaangor Enlightened,Vicious Beak,1,2,4,3,0,1,6,3,6,4,0,"""""",3,95,0,0
+133,Beasts of Chaos Tzaangor Enlightened on Discs of Tzeentch,Tzeentchian Spear,2,3,4,3,1,2,16,4,6,4,0,"""""",3,180,0,0
+134,Beasts of Chaos Tzaangor Enlightened on Discs of Tzeentch,Vicious Beak,1,2,4,3,0,1,16,4,6,4,0,"""""",3,180,0,0
+135,Beasts of Chaos Tzaangor Enlightened on Discs of Tzeentch,Teeth and Horns,1,D3,4,3,1,D3,16,4,6,4,0,"""""",3,180,0,0
+136,Beasts of Chaos Tzaangor Skyfires,Arrow of Fate,24,1,4,3,1,D3,16,4,6,4,0,"""""",3,195,0,0
+137,Beasts of Chaos Tzaangor Skyfires,Bow Stave,1,2,5,5,0,1,16,4,6,4,0,"""""",3,195,0,0
+138,Beasts of Chaos Tzaangor Skyfires,Vicious Beak,1,1,4,3,0,1,16,4,6,4,0,"""""",3,195,0,0
+139,Beasts of Chaos Tzaangor Skyfires,Teeth and Horns,1,D3,4,3,1,D3,16,4,6,4,0,"""""",3,195,0,0
+140,Bestigors,Despoiler Axe,1,2,4,3,1,1,6,1,6,4,0,"""""",10,125,0,0
+141,Bullgors,Bullgor Great Axe,1,2,4,3,2,3,7,4,7,5,0,"""""",3,130,0,0
+142,Bullgors,Bullgor Horns,1,2,4,4,0,1,7,4,7,5,0,"""""",3,130,0,0
+143,Centigors,Centigor Spear,2,2,4,4,0,1,14,2,5,4,0,"""""",5,85,0,0
+144,Centigors,Clawed Forelimbs,1,2,5,5,0,1,14,2,5,4,0,"""""",5,85,0,0
+145,Chaos Warhounds,Slavering Jaws,1,2,4,4,0,1,10,1,4,6,0,"""""",10,80,0,0
+146,Cockatrice,Petrifying Gaze,10,1,4,D6,6,1,12,8,5,6,0,"""""",1,110,0,0
+147,Cockatrice,Vicious Beak,2,2,4,3,1,D3,12,8,5,6,0,"""""",1,110,0,0
+148,Cockatrice,Sword-like Talons,1,4,4,4,0,1,12,8,5,6,0,"""""",1,110,0,0
+149,Dragon Ogors,Paired Ancient Weapons,1,6,3,3,0,1,8,5,6,4,0,"""""",3,125,0,0
+150,Dragon Ogors,Raking Foreclaws,1,2,4,4,0,1,8,5,6,4,0,"""""",3,125,0,0
+151,Razorgors,Large Tusks and Hooves,1,4,4,3,1,1,10,4,6,5,0,"""H6.mortal.in.addition""",1,55,0,0
+152,Tuskgor Chariots,Despoiler Axe,1,2,4,3,1,1,10,6,6,4,0,"""""",1,65,0,0
+153,Tuskgor Chariots,Gnarled Spear,2,1,4,4,0,1,10,6,6,4,0,"""""",1,65,0,0
+154,Tuskgor Chariots,Tusks and Hooves,1,4,4,3,0,1,10,6,6,4,0,"""""",1,65,0,0
+155,Ungor Raiders,Raider Bow,18,1,4,4,0,1,6,1,4,6,0,"""pregame.move""",10,80,0,0
+156,Ungor Raiders,Jagged Shank,1,1,5,5,0,1,6,1,4,6,0,"""pregame.move""",10,80,0,0
+157,Chaos Gargant,Massive Club,3,3D6,3,3,1,1,8,12,6,5,0,"""""",1,160,0,0
+158,Chaos Gargant,Vicious ’Eadbutt,1,1,4,3,3,6,8,12,6,5,0,"""""",1,160,0,0
+159,Chaos Gargant,Mighty Kick,2,1,3,3,2,D3,8,12,6,5,0,"""""",1,160,0,0
+160,Chimera,Fiery Breath,14,1,1,1,6,D6,10,12,6,5,0,"""""",1,200,0,0
+161,Chimera,Avian Head,1,3,3,4,3,D3,10,12,6,5,0,"""""",1,200,0,0
+162,Chimera,Draconic Head,1,3,4,4,1,2,10,12,6,5,0,"""""",1,200,0,0
+163,Chimera,Leonine Head,1,3,4,3,1,D6,10,12,6,5,0,"""""",1,200,0,0
+164,Chimera,Mauling Claws,2,6,4,3,0,1,10,12,6,5,0,"""""",1,200,0,0
+165,Cygor,Desecrated Boulder,18,1,4,2,2,D6,8,14,7,5,0,"""unbind.2.spells""",1,125,0,0
+166,Cygor,Massive Horns,2,8,4,3,1,1,8,14,7,5,0,"""unbind.2.spells""",1,125,0,0
+167,Ghorgon,Butchering Blades,2,5,3,3,1,3,8,14,7,5,0,"""""",1,155,0,0
+168,Ghorgon,Huge Slavering Maw,1,1,4,2,1,D6,8,14,7,5,0,"""""",1,155,0,0
+169,Jabberslythe,Slythey Tongue,9,3,3,3,1,1,12,10,6,4,0,"""""",1,150,0,0
+170,Jabberslythe,Vorpal Claws,1,6,3,3,2,1,12,10,6,4,0,"""""",1,150,0,0
+171,Jabberslythe,Spiked Tail,3,1,4,2,2,D3,12,10,6,4,0,"""""",1,150,0,0
+172,Mutalith Vortex Beast,Crushing Claws,2,4,4,2,1,D3,10,14,7,4,0,"""roll on mvb chart""",1,185,0,0

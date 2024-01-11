@@ -1,0 +1,201 @@
+#######################################################
+# Wahapedia Data
+#######################################################
+
+#cwd = os.getcwd()
+
+from bs4 import BeautifulSoup
+import numpy as np
+import pandas as pd
+import os
+import requests
+import matplotlib.pyplot as plt
+
+#df_backup = pd.read_csv("2023-05-26 Project HOS input.csv")
+df = pd.read_csv("2023-05-26 Project HOS input.csv")
+
+# so normally in R i'll create a back_up so if I need to revert back
+# I can just run this, however python links them together an updates.
+#df = df_backup
+
+df.dtypes
+
+#df.iloc("A" == 3)
+#type(df["Points_per_warscroll"])
+
+# Data Cleaning:
+
+# Need to impute/fix string data points.
+df["Range"].unique()
+
+df["A"].unique()
+df["A"] = df["A"].replace("2D6", "7")
+df["A"] = df["A"].replace("D3", "2")
+df["A"] = df["A"].replace("3D6", "10.5")
+df["A"] = df["A"].replace("D6", "3.5")
+df["A"] = df["A"].replace("sigvald.charge", "7")
+df["A"] = df["A"].astype(float)
+
+df["H"].unique()
+
+df["W"].unique()
+df["W"] = df["W"].replace("D6", "3.5")
+df["W"] = df["W"].astype(float)
+
+df["R"].unique()
+
+df["D"].unique()
+df["D"] = df["D"].replace("2D6", "7")
+df["D"] = df["D"].replace("D3", "2")
+df["D"] = df["D"].replace("3D6", "10.5")
+df["D"] = df["D"].replace("D6", "3.5")
+df["D"] = df["D"].replace("sigvald.charge", "7")
+df["D"] = df["D"].astype(float)
+
+df["Move"].unique()
+df["Move"] = df["Move"].replace("2D6", "7")
+df["Move"] = df["Move"].astype(float)
+
+df["Save"].unique()
+ 
+#######################################################
+## Not Working:
+## Tired to write a fun to fix strings etc.
+#def replace_D_strings(xx):
+#    xx = xx.replace("2D6", "7")
+#    xx = xx.replace("D3", "2")
+#    xx = xx.replace("3D6", "10")
+#    xx = xx.replace("sigvald.charge", "7")
+#    xx = xx.astype(float)
+#
+#xx = [0,0,0]
+#xx = replace_D_strings(df["A"])
+#print(xx)
+
+#######################################################
+
+# Histogram of points costs.
+plt.hist(df["Points_per_warscroll"])
+plt.xlabel("Points cost")
+plt.ylabel("Frequency")
+plt.show()
+
+# Range Profile.
+## Needs more work, maybe take the average range across all profiles?
+#b1, b0 = np.polyfit(df["Range"], df["Points_per_warscroll"], 1)
+#plt.plot(df["Range"], b1*df["Range"]+b0)
+
+#plt.scatter(df["Range"], df["Points_per_warscroll"])
+#plt.xlabel("Range of attack")
+#plt.ylabel("Points cost")
+#plt.show()
+
+# A Profile.
+b1, b0 = np.polyfit(df["A"], df["Points_per_warscroll"], 1)
+plt.plot(df["A"], b1*df["A"]+b0)
+
+plt.scatter(df["A"], df["Points_per_warscroll"])
+plt.xlabel("Number of attack dice")
+plt.ylabel("Points cost")
+plt.show()
+
+# D Profile.
+b1, b0 = np.polyfit(df["D"], df["Points_per_warscroll"], 1)
+plt.plot(df["D"], b1*df["D"]+b0)
+
+plt.scatter(df["D"], df["Points_per_warscroll"])
+plt.xlabel("Damage per attack dice")
+plt.ylabel("Points cost")
+plt.show()
+
+# Move Profile.
+b1, b0 = np.polyfit(df["Move"], df["Points_per_warscroll"], 1)
+plt.plot(df["Move"], b1*df["Move"]+b0)
+
+plt.scatter(df["Move"], df["Points_per_warscroll"])
+plt.xlabel("Movement range")
+plt.ylabel("Points cost")
+plt.show()
+
+# Wounds Profile.
+df["Wounds_X_model"] = 0
+
+# so the points cost refers to the unit, whilst wounds relates to each model 
+# (units are full of models [e.g., a unit of 10 models]). So need to create a
+# Wounds * Models feature.
+for x in range(len(df)):
+    df["Wounds_X_model"].iloc[x] = df["Wounds"].iloc[x] * df["unit_size"].iloc[x]
+
+b1, b0 = np.polyfit(df["Wounds_X_model"], df["Points_per_warscroll"], 1)
+plt.plot(df["Wounds_X_model"], b1*df["Wounds_X_model"]+b0)
+
+plt.scatter(df["Wounds_X_model"], df["Points_per_warscroll"])
+plt.xlabel("Wounds count (per unit)")
+plt.ylabel("Points cost")
+plt.show()
+
+# Bravery Profile.
+b1, b0 = np.polyfit(df["Bravery"], df["Points_per_warscroll"], 1)
+plt.plot(df["Bravery"], b1*df["Bravery"]+b0)
+
+plt.scatter(df["Bravery"], df["Points_per_warscroll"])
+plt.xlabel("Bravery value")
+plt.ylabel("Points cost")
+plt.show()
+
+# Save Profile.
+b1, b0 = np.polyfit(df["Save"], df["Points_per_warscroll"], 1)
+plt.plot(df["Save"], b1*df["Save"]+b0)
+
+plt.scatter(df["Save"], df["Points_per_warscroll"])
+plt.xlabel("Save roll")
+plt.ylabel("Points cost")
+plt.show()
+
+# Ward Save Profile.
+# Many units were imputed with 0 ward, this should be NA, i.e.,
+# these units do not have wards. Going to make a arrary with only
+# ward > 1.
+
+# Making a ward col for below.
+ward = df["Ward"][df["Ward"] > 1]
+
+b1, b0 = np.polyfit(ward, df["Points_per_warscroll"][df["Ward"] > 1], 1)
+plt.plot(ward, b1*ward+b0)
+
+plt.scatter(ward, df["Points_per_warscroll"][df["Ward"] > 1])
+plt.xlabel("Ward save roll")
+plt.ylabel("Points cost")
+plt.show()
+
+# Potential interaction effects to test.
+
+# Combat potential interactions.
+#df["A_X_H"] = df["A"] * df["H"]
+#df["A_X_W"] = df["A"] * df["W"]
+#df["H_X_W"] = df["H"] * df["W"]
+#df["A_X_H_X_W"] = df["A"] * df["H"] * df["W"]
+
+# In regression will need to include all low order interactions 
+# before this four-way effect.
+df["A_X_H_X_W_X_D"] = df["A"] * df["H"] * df["W"] * df["D"]
+
+b1, b0 = np.polyfit(df["A_X_H_X_W_X_D"], df["Points_per_warscroll"], 1)
+plt.plot(df["A_X_H_X_W_X_D"], b1*df["A_X_H_X_W_X_D"]+b0)
+
+plt.scatter(df["A_X_H_X_W_X_D"], df["Points_per_warscroll"])
+plt.xlabel("Combat potential composite")
+plt.ylabel("Points cost")
+plt.show()
+
+# Defensive potential interactions.
+df["Wound_X_model_X_Save"] = df["Wounds_X_model"] * df["Save"]
+
+b1, b0 = np.polyfit(df["Wound_X_model_X_Save"], df["Points_per_warscroll"], 1)
+plt.plot(df["Wound_X_model_X_Save"], b1*df["Wound_X_model_X_Save"]+b0)
+
+plt.scatter(df["Wound_X_model_X_Save"], df["Points_per_warscroll"])
+plt.xlabel("Defensive potential composite")
+plt.ylabel("Points cost")
+plt.show()
+
